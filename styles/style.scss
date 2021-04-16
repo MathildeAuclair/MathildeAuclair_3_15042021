@@ -1,0 +1,20 @@
+@import './utils/fonctions';
+@import './utils/mixins';
+@import './utils/placeholders';
+@import './utils/variables';
+@import './utils/polices';
+
+
+.logo {
+    font-size: 35px;
+    font-family: 'Shrikhand';
+    text-align: center;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.localisation {
+    text-align: center;
+    font-size: 12px;
+    background-color: $gris;
+}

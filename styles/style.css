@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Shrikhand', sans-serif; }
+@font-face {
+  font-family: 'Roboto', sans-serif; }
+.logo {
+  font-size: 35px;
+  font-family: 'Shrikhand';
+  text-align: center; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.localisation {
+  text-align: center;
+  font-size: 12px;
+  background-color: #DCDCDC; }
+
+/*# sourceMappingURL=style.css.map */
