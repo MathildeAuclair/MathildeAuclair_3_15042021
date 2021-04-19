@@ -6,15 +6,143 @@
 
 
 .logo {
-    font-size: 35px;
-    font-family: 'Shrikhand';
-    text-align: center;
+    @include logo;
 }
 body {
     font-family: 'Roboto', sans-serif;
+    max-width: 350px;
+}
+::before {
+    margin-right: 20px;
 }
 .localisation {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+    font-size: 10px;
+    background-color: rgb(234,234,234);
+    margin-left: -10px;
+}
+.btn {
+    @include btn;
+}
+.presentation {
+    height: 300px;
+    background-color: rgb(246, 246, 246);
+}
+#reservez {
+    font-size: 24px;
     text-align: center;
-    font-size: 12px;
-    background-color: $gris;
+}
+#decouvrez {
+    font-family: 'Roboto', sans-serif; font-weight: 100;
+    font-size: 18px;
+    text-align: center;
+}
+.fonctionnement {
+    height: 350px;
+    margin-top: 50px;
+
+        h3 {
+        font-size: 24px;
+        margin-left: -30px;
+        }
+            li {
+            list-style-type: none;
+            height: 60px;
+            border-radius: 20px 20px 20px 20px;
+            background-color: rgb(246, 246, 246);
+            margin-bottom: 30px;
+            justify-content: center;
+            margin-left: -35px;
+             }
+                  a {
+                  text-decoration: none;
+                  color: black;
+                  justify-content: center;
+                  width: 300px;
+                  display: flex;
+                  }
+}
+.numero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    margin-left: -10px;
+    background: $primary-color;
+    color: white;
+}
+#telephone {
+    @extend %couleur-icone;
+}
+#liste {
+    @extend %couleur-icone;
+}
+#shop {
+    @extend %couleur-icone;
+}
+::marker {
+    color: black;
+}
+.box {
+	background-color: #FFFFFF;
+	border-radius: 25px 25px 25px 25px;
+	border-bottom-width: 15px;
+	display: inline-block;
+	text-decoration: none;
+	list-style-type: none;
+	color: black;
+	margin-bottom: 25px;
+	box-shadow: 3px 3px 3px rgb(235,235,235);
+}
+.restaurant {
+    height: 200px;
+    width: 350px;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+	object-fit: cover;
+}
+.titre-box{ 
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    margin-right: 150px;
+    margin-left: 10px;
+    margin-bottom: -30px;
+   }
+.ville {
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    margin-left: 10px;
+    color: black;
+    font-family: 'Roboto', sans-serif; font-weight: 100;
+}
+footer {
+    background-color: rgb(53, 53,53);
+    height: 170px;
+    li {
+        text-decoration: none;
+        list-style-type: none;
+        margin-bottom: 8px;
+    }
+    a {
+        text-decoration: none;
+        list-style-type: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        }
+}
+#titre-footer {
+    font-family: 'Shrikhand', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 39px;
+    font-size: 18px;
 }

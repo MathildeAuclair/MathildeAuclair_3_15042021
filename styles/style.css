@@ -1,18 +1,202 @@
+#telephone, #liste, #shop {
+  color: #7e7e7e;
+  font-size: 16px;
+}
+
 @font-face {
-  font-family: 'Shrikhand', sans-serif; }
+  font-family: 'Shrikhand', sans-serif;
+}
+
 @font-face {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+}
+
 .logo {
-  font-size: 35px;
+  font-size: 30px;
+  height: 50px;
+  border-bottom: black;
   font-family: 'Shrikhand';
-  text-align: center; }
+  text-align: center;
+}
 
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  max-width: 350px;
+}
+
+::before {
+  margin-right: 20px;
+}
 
 .localisation {
-  text-align: center;
-  font-size: 12px;
-  background-color: #DCDCDC; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  font-size: 10px;
+  background-color: #eaeaea;
+  margin-left: -10px;
+}
 
+.btn {
+  width: 210px;
+  height: 50px;
+  color: #FFFFFF;
+  font-size: 16px;
+  background-color: #9356DC;
+  border-radius: 30px 30px 30px 30px;
+  border-color: #9356DC;
+  margin-left: 75px;
+}
+
+.btn.btn:hover {
+  background-color: darkorchid;
+}
+
+.presentation {
+  height: 300px;
+  background-color: #f6f6f6;
+}
+
+#reservez {
+  font-size: 24px;
+  text-align: center;
+}
+
+#decouvrez {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  text-align: center;
+}
+
+.fonctionnement {
+  height: 350px;
+  margin-top: 50px;
+}
+
+.fonctionnement h3 {
+  font-size: 24px;
+  margin-left: -30px;
+}
+
+.fonctionnement li {
+  list-style-type: none;
+  height: 60px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: -35px;
+}
+
+.fonctionnement a {
+  text-decoration: none;
+  color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.numero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  margin-left: -10px;
+  background: #9356DC;
+  color: white;
+}
+
+::marker {
+  color: black;
+}
+
+.box {
+  background-color: #FFFFFF;
+  border-radius: 25px 25px 25px 25px;
+  border-bottom-width: 15px;
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  margin-bottom: 25px;
+  -webkit-box-shadow: 3px 3px 3px #ebebeb;
+          box-shadow: 3px 3px 3px #ebebeb;
+}
+
+.restaurant {
+  height: 200px;
+  width: 350px;
+  border-radius: 25px 25px 0px 0px;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.titre-box {
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  margin-right: 150px;
+  margin-left: 10px;
+  margin-bottom: -30px;
+}
+
+.ville {
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 10px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+footer {
+  background-color: #353535;
+  height: 170px;
+}
+
+footer li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+
+footer a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+#titre-footer {
+  font-family: 'Shrikhand', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 39px;
+  font-size: 18px;
+}
 /*# sourceMappingURL=style.css.map */
