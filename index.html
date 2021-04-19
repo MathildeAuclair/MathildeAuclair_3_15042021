@@ -19,35 +19,35 @@
 <div class="localisation"><h2><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h2></div>
 
     <nav>
-       <form>
-           <p>Réservez le menu qui vous convient</p>
-           <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-         <input type="submit" value="Explorer nos restaurants">
+       <form class="presentation">
+           <p id="reservez"><strong>Réservez le menu qui vous convient</strong></p>
+           <p id="decouvrez">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+         <input class="btn" type="submit" value="Explorer nos restaurants">
        </form>
 
-       <ul>
-        <h3>Fonctionnement</h3>  
-        <li><a href="#"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</a></li>
-        <li><a href="#"><i class="fas fa-list-ul"></i>Composez votre menu</a></li>
-        <li><a href="#"><i class="fas fa-store"></i>Dégustez au restaurant</a></li>
-      </ul>
+       <ol class="fonctionnement">
+        <h3><strong>Fonctionnement</strong></h3>  
+        <li><div class="numero">1</div><a href="#"><i class="fas fa-mobile-alt" id="telephone"></i>Choisissez un restaurant</a></li>
+        <li><div class="numero">2</div><a href="#"><i class="fas fa-list-ul" id="liste"></i>Composez votre menu</a></li>
+        <li><div class="numero">3</div><a href="#"><i class="fas fa-store" id="shop"></i>Dégustez au restaurant</a></li>
+      </ol>
 
      </nav>
 
       <section>
         <h2>Restaurants</h2>
-        <div><a href="pages/la_palette_du_gout.html"><img src="users/mathmiko/desktop/ohmyfood/medias/images/restaurants/la_palette_du_gout.jpg" alt="restaurant1" class="restaurant"/><h3>La palette du goût</h3><p>Ménilmontant</p><i class="far fa-heart"></i></a></div>
+        <div class="box"><a href="pages/la_palette_du_gout.html"><img src="/users/mathmiko/desktop/ohmyfood/medias/images/restaurants/la_palette_du_gout.jpg" alt="restaurant1" class="restaurant"/><h3 class="titre-box">La palette du goût</h3><p class="ville">Ménilmontant</p><i class="far fa-heart"></i></a></div>
 
-        <div><a href="pages/la_note_enchantee.html"><img src="users/mathmiko/desktop/ohmyfood/medias/images/restaurants/la_note_enchantee.jpg" alt="restaurant2" class="restaurant"/><h3>La note enchantée</h3><p>Charonne</p><i class="far fa-heart"></i></a></div>
+        <div class="box"><a href="pages/la_note_enchantee.html"><img src="/users/mathmiko/desktop/ohmyfood/medias/images/restaurants/la_note_enchantee.jpg" alt="restaurant2" class="restaurant"/><h3 class="titre-box">La note enchantée</h3><p class="ville">Charonne</p><i class="far fa-heart"></i></a></div>
         
-        <div><a href="pages/a_la_francaise.html"><img src="users/mathmiko/desktop/ohmyfood/medias/images/restaurants/a_la_francaise.jpg" alt="restaurant3" class="restaurant"/><h3>A la française</h3><p>Cité Rouge</p><i class="far fa-heart"></i></a></div>
+        <div class="box"><a href="pages/a_la_francaise.html"><img src="/users/mathmiko/desktop/ohmyfood/medias/images/restaurants/a_la_francaise.jpg" alt="restaurant3" class="restaurant"/><h3 class="titre-box">A la française</h3><p class="ville">Cité Rouge</p><i class="far fa-heart"></i></a></div>
 
-        <div><a href="pages/le_delice_des_sens.html"><img src="users/mathmiko/desktop/ohmyfood/medias/images/restaurants/le_delice_des_sens.jpg" alt="restaurant4" class="restaurant"/><h3>Le délice des sens</h3><p>Folie-Méricourt</p><i class="far fa-heart"></i></a></div>
+        <div class="box"><a href="pages/le_delice_des_sens.html"><img src="/users/mathmiko/desktop/ohmyfood/medias/images/restaurants/le_delice_des_sens.jpg" alt="restaurant4" class="restaurant"/><h3 class="titre-box">Le délice des sens</h3><p class="ville">Folie-Méricourt</p><i class="far fa-heart"></i></a></div>
       </section>
 
     <footer>
+            <div><a href="#" id="titre-footer">Ohmyfood</a></div>
         <ul>
-            <li><a href="#">Ohmyfood</a></li>
             <li><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
             <li><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
