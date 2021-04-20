@@ -3,6 +3,13 @@
   font-size: 16px;
 }
 
+#coeur, #coeur-1, #coeur-2, #coeur-3, #coeur-5, #coeur-6, #coeur-7, #coeur-8 {
+  color: black;
+  font-size: 22px;
+  margin-left: 180px;
+  float: right;
+}
+
 @font-face {
   font-family: 'Shrikhand', sans-serif;
 }
@@ -21,9 +28,10 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  max-width: 350px;
+  max-width: 370px;
 }
 
+/* CSS Accueil version mobile */
 ::before {
   margin-right: 20px;
 }
@@ -41,36 +49,45 @@ body {
   margin-left: -10px;
 }
 
-.btn {
+.btn, .btn-menu {
   width: 210px;
   height: 50px;
-  color: #FFFFFF;
+  color: white;
   font-size: 16px;
-  background-color: #9356DC;
+  background: linear-gradient(340deg, #9356DC, #FF79DA);
   border-radius: 30px 30px 30px 30px;
-  border-color: #9356DC;
+  border-color: #f6f6f6;
   margin-left: 75px;
 }
 
-.btn.btn:hover {
-  background-color: darkorchid;
+.btn.btn:hover, .btn-menu:hover {
+  background: #ff96f0;
 }
 
 .presentation {
   height: 300px;
   background-color: #f6f6f6;
+  display: inline-block;
 }
 
 #reservez {
   font-size: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  margin-top: 35px;
 }
 
 #decouvrez {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .fonctionnement {
@@ -85,43 +102,44 @@ body {
 
 .fonctionnement li {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex-start;
+          flex-direction: flex-start;
   height: 60px;
   border-radius: 20px 20px 20px 20px;
   background-color: #f6f6f6;
   margin-bottom: 30px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-left: -35px;
 }
 
 .fonctionnement a {
   text-decoration: none;
-  color: black;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: black;
+  width: 300px;
+  margin-left: 80px;
+  margin-top: 19px;
 }
 
 .numero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 25px;
   height: 25px;
   border-radius: 25px;
-  margin-left: -10px;
+  margin-left: -90px;
+  margin-right: 40px;
+  margin-top: -3px;
   background: #9356DC;
   color: white;
 }
@@ -130,10 +148,20 @@ body {
   color: black;
 }
 
+section {
+  height: 1350px;
+  background-color: #f6f6f6;
+}
+
+section h2 {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
 .box {
   background-color: #FFFFFF;
   border-radius: 25px 25px 25px 25px;
-  border-bottom-width: 15px;
   display: inline-block;
   text-decoration: none;
   list-style-type: none;
@@ -144,7 +172,7 @@ body {
 }
 
 .restaurant {
-  height: 200px;
+  height: 180px;
   width: 350px;
   border-radius: 25px 25px 0px 0px;
   min-width: 0;
@@ -176,13 +204,14 @@ body {
 
 footer {
   background-color: #353535;
-  height: 170px;
+  height: 180px;
 }
 
 footer li {
   text-decoration: none;
   list-style-type: none;
   margin-bottom: 8px;
+  margin-left: -15px;
 }
 
 footer a {
@@ -192,11 +221,120 @@ footer a {
   font-family: 'Roboto', sans-serif;
 }
 
-#titre-footer {
-  font-family: 'Shrikhand', sans-serif;
+.titre-footer {
+  font-family: 'Shrikhand';
+  display: inline-block;
   margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 39px;
+  margin-left: 22px;
   font-size: 18px;
+}
+
+/* CSS des 4 Menus */
+#fleche {
+  color: black;
+  opacity: 1;
+  font-size: 22px;
+  margin-left: -90px;
+}
+
+#menu-restaurant {
+  height: 300px;
+  width: 360px;
+  position: inherit;
+}
+
+#section-page {
+  height: 1250px;
+  width: 360px;
+  border-radius: 45px 45px 0px 0px;
+  margin-top: -60px;
+  position: absolute;
+}
+
+#nom-restaurant {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+#coeur-5 {
+  margin-top: -65px;
+  margin-right: 15px;
+}
+
+.titre-majuscule {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  border-bottom: 3px #99E2D0 solid;
+}
+
+.bloc-menu {
+  height: 75px;
+  width: 340px;
+  border-radius: 25px 25px 25px 25px;
+  background-color: #FFF;
+}
+
+.ligne-1 {
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+.ligne-2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-left: 13px;
+}
+
+.prix {
+  float: right;
+  margin-top: -30px;
+  margin-right: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-menu {
+  margin-top: 70px;
+}
+
+#bas-de-page-menu {
+  background-color: #353535;
+  height: 180px;
+  margin-top: 1190px;
+  width: 360px;
+}
+
+#bas-de-page-menu li {
+  text-decoration: none;
+  list-style-type: none;
+  margin-bottom: 8px;
+  margin-left: -15px;
+}
+
+#bas-de-page-menu a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.titre-footer {
+  font-family: 'Shrikhand';
+}
+
+#coeur-6 {
+  margin-top: -65px;
+  margin-right: 15px;
+}
+
+#coeur-7 {
+  margin-top: -65px;
+  margin-right: 15px;
+}
+
+#coeur-8 {
+  margin-top: -65px;
+  margin-right: 15px;
 }
 /*# sourceMappingURL=style.css.map */
