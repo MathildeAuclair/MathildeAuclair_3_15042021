@@ -47,12 +47,11 @@ body {
     margin-bottom: 40px;
 }
 .fonctionnement {
-    height: 350px;
+    height: 300px;
     margin-top: 50px;
 
-        h3 {
+        strong {
         font-size: 24px;
-        margin-left: -30px;
         }
             li {
             list-style-type: none;
@@ -61,7 +60,7 @@ body {
             height: 60px;
             border-radius: 20px 20px 20px 20px;
             background-color: rgb(246, 246, 246);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             margin-left: -35px;
              }
                   a {
@@ -72,6 +71,9 @@ body {
                   margin-left: 80px;
                   margin-top: 19px;
                   }
+}
+.liste-fonctionnement:hover {
+    background-color: rgb(246, 236, 255);
 }
 .numero {
     display: flex;
@@ -88,17 +90,27 @@ body {
 #telephone {
     @extend %couleur-icone;
 }
+#telephone:hover {
+    color: $primary-color;
+}
 #liste {
     @extend %couleur-icone;
 }
+#liste:hover{
+    color: $primary-color;
+}
 #shop {
     @extend %couleur-icone;
+}
+#shop:hover {
+    color: $primary-color;
 }
 ::marker {
     color: black;
 }
 section {
     height: 1350px;
+    width: 360px;
     background-color: rgb(246,246,246);
     h2 {
         margin-top: 50px;
@@ -106,14 +118,11 @@ section {
         display: inline-block;
     }
 }
-
 .box {
+    @extend %affichage-box;
 	background-color: #FFFFFF;
+    width: 350px;
 	border-radius: 25px 25px 25px 25px;
-	display: inline-block;
-	text-decoration: none;
-	list-style-type: none;
-	color: black;
 	margin-bottom: 25px;
 	box-shadow: 3px 3px 3px rgb(235,235,235);
 }
@@ -126,35 +135,37 @@ section {
 	overflow: hidden;
 	object-fit: cover;
 }
-.titre-box{ 
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
-    color: black;
+.nouveau {
+    height: 30px;
+    width: 72px;
+    background-color: $third-color;
+    position: absolute;
+    color: green;
+    text-align: center;
+    margin-left: 265px;
+    margin-top: -170px;
+}
+.texte-nouveau {
+        margin-top: 5px;
+}
+
+.titre-box { 
+    @extend %affichage-box;
     margin-right: 150px;
     margin-left: 10px;
     margin-bottom: -30px;
    }
 .ville {
-    display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
+    @extend %affichage-box;
     margin-left: 10px;
-    color: black;
     font-family: 'Roboto', sans-serif; font-weight: 100;
 }
-#coeur
-{
+.fa-heart {
     @extend %couleur-coeur;
-}
-#coeur-1 {
-    @extend %couleur-coeur;
-}
-#coeur-2 {
-    @extend %couleur-coeur;
-}
-#coeur-3 {
-    @extend %couleur-coeur;
+    margin-right: 15px;
+ }
+.fa-heart:hover {
+        background-color: pink;
 }
 footer {
     @include footer;
@@ -168,79 +179,108 @@ footer {
     color: black;
     opacity: 1;
     font-size: 22px;
-    margin-left: -90px;
+    margin-right: -32px;
 }
 #menu-restaurant {
     height: 300px;
     width: 360px;
-    position: inherit;
 }
 #section-page {
-    height: 1250px;
-    width: 360px;
-    border-radius: 45px 45px 0px 0px;
-    margin-top: -60px;
-    position: absolute;
+    @include marges-page;
 }
 #nom-restaurant {
     font-family: 'Shrikhand', sans-serif;
     font-size: 25px;
     margin-left: 15px;
 }
-#coeur-5 {
+.fa-heart.menu {
     @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+    margin-right: 20px;
+    display: inline-block;
+    margin-top: 56px;
 }
 .titre-majuscule {
     font-family: 'Roboto', sans-serif; font-weight: 100;
     font-size: 18px;
+    width: 45px;
     border-bottom: 3px $third-color solid;
+    padding-bottom: 0.3em;
 }
 .bloc-menu {
     height: 75px;
     width: 340px;
     border-radius: 25px 25px 25px 25px;
     background-color: #FFF;
+    display: inline-block;
+    margin-bottom: 15px;
 }
+.bloc-menu {
+    animation-duration: 3s;
+    animation-name: glissement;
+    animation-iteration-count: 1;
+  }
+  @keyframes glissement {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+    to {
+      margin-left: 0%;
+      width: 95%;
+    }
+  }
 .ligne-1 {
     font-size: 16px;
     margin-left: 15px;
+    width: 240px;
 }
 .ligne-2 {
     font-family: 'Roboto', sans-serif; font-weight: 100;
     margin-left: 13px;
+    width: 240px;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: -10px;
 }
 .prix {
      float: right;
-     margin-top: -30px;
-     margin-right: 20px;
+     margin-top: -45px;
+     margin-right: 10px;
      font-family: 'Roboto', sans-serif;
 }
 .btn-menu {
     @extend .btn;
-    margin-top: 70px;
+    margin-top: 30px;
 }
-#bas-de-page-menu {
-    @include footer;
-    margin-top: 1190px;
-    width: 360px;
+.btn-menu-enchantee {
+    @extend .btn;
+    margin-top: 30px;
 }
 .titre-footer {
     font-family: 'Shrikhand';
 }
-#coeur-6 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+.overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-#coeur-7 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+#menu.exception {
+    @include marges-page;
 }
-#coeur-8 {
-    @extend %couleur-coeur;
-    margin-top: -65px;
-    margin-right: 15px;
+.fa-check-circle {
+    background-color: $third-color;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+.coche {
+    display: inline-block;
+    margin-top: -80px;
+    height: 75px;
+    width: 55px;
+    background-color: $third-color;
+    border: hidden;
+    margin-right: -18px;
+    border-radius: 0px 25px 25px 0px;
 }
