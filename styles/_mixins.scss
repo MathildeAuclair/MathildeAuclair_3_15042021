@@ -55,6 +55,23 @@
     width: 360px;
     border-radius: 45px 45px 0px 0px;
     margin-top: -60px;
-    max-height: 1270px;
+    max-height: 1350px;
     position: sticky;
 }
+@mixin menu {
+    animation: fadein 2.5s;
+  }
+  @keyframes fadein {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    80%{
+        opacity: 0.8;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }

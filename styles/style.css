@@ -1,14 +1,51 @@
+@charset "UTF-8";
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 #telephone, #liste, #shop {
   color: #7e7e7e;
   font-size: 17px;
 }
 
-.fa-heart, .fa-heart.menu {
+.fa-heart, .coeur, .fa-heart.menu {
   color: black;
   font-size: 22px;
   float: right;
   height: 22px;
   width: 22px;
+  margin-right: 15px;
 }
 
 .box, .titre-box, .ville {
@@ -38,7 +75,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  max-width: 370px;
+  width: 360px;
 }
 
 /* CSS Accueil version mobile */
@@ -56,7 +93,6 @@ body {
   height: 45px;
   font-size: 10px;
   background-color: #eaeaea;
-  margin-left: -10px;
 }
 
 .btn, .btn-menu, .btn-menu-enchantee {
@@ -236,12 +272,58 @@ section h2 {
   font-weight: 100;
 }
 
-.fa-heart {
-  margin-right: 15px;
+.coeur::before {
+  content: "♡";
+  cursor: pointer;
+  position: absolute;
 }
 
-.fa-heart:hover {
-  background-color: pink;
+.coeur:hover {
+  color: #f07de6;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-animation: 2s linear 1s slideintop;
+          animation: 2s linear 1s slideintop;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes slideintop {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 1;
+    background-color: transparent;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+    background-color: #f07de6;
+  }
+}
+
+@keyframes slideintop {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    opacity: 1;
+    background-color: transparent;
+  }
+  to {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+    background-color: #f07de6;
+  }
+}
+
+.coeur::after {
+  content: "♡";
+  color: #f07de6;
+  position: relative;
+  cursor: pointer;
+  opacity: 1;
 }
 
 footer {
@@ -289,9 +371,10 @@ footer a {
   width: 360px;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
-  max-height: 1270px;
+  max-height: 1350px;
   position: -webkit-sticky;
   position: sticky;
+  height: 1260px;
 }
 
 #nom-restaurant {
@@ -322,59 +405,121 @@ footer a {
   background-color: #FFF;
   display: inline-block;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
-.bloc-menu {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-name: glissement;
-          animation-name: glissement;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+.coche {
+  height: 75px;
+  width: 65px;
+  background-color: #99E2D0;
+  border: hidden;
+  margin-left: 290px;
+  margin-top: -65px;
+  border-radius: 0px 25px 25px 0px;
+  opacity: 0;
+  overflow: auto;
+  -webkit-transform-origin: right 80%;
+          transform-origin: right 80%;
+  float: right;
+  display: inline-block;
 }
 
-@-webkit-keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+.coche:hover {
+  cursor: pointer;
+  opacity: 1;
+  -webkit-animation: glisse 2.5s;
+          animation: glisse 2.5s;
+}
+
+@-webkit-keyframes glisse {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
-  to {
-    margin-left: 0%;
-    width: 95%;
+  50% {
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
   }
 }
 
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 300%;
+@keyframes glisse {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
-  to {
-    margin-left: 0%;
-    width: 95%;
+  50% {
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
   }
+}
+
+.coche::after {
+  -webkit-animation: glissade 2.5s;
+          animation: glissade 2.5s;
+}
+
+@-webkit-keyframes glissade {
+  50% {
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
+  }
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+@keyframes glissade {
+  50% {
+    -webkit-transform: scaleX(50%);
+            transform: scaleX(50%);
+  }
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+}
+
+.entrees {
+  -webkit-animation: fadein 2.5s;
+          animation: fadein 2.5s;
+}
+
+.plats {
+  -webkit-animation: fadein 2.5s;
+          animation: fadein 2.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.desserts {
+  -webkit-animation: fadein 2.5s;
+          animation: fadein 2.5s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .ligne-1 {
   font-size: 16px;
   margin-left: 15px;
-  width: 240px;
+  max-width: 240px;
 }
 
 .ligne-2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   margin-left: 13px;
-  width: 240px;
+  max-width: 240px;
   font-size: 15px;
   margin-left: 15px;
   margin-top: -10px;
 }
 
 .prix {
-  float: right;
   margin-top: -45px;
-  margin-right: 10px;
+  height: 20px;
+  max-width: 80px;
+  margin-left: 280px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -400,7 +545,7 @@ footer a {
   width: 360px;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
-  max-height: 1270px;
+  max-height: 1350px;
   position: -webkit-sticky;
   position: sticky;
 }
@@ -413,14 +558,62 @@ footer a {
   margin-left: 10px;
 }
 
-.coche {
-  display: inline-block;
-  margin-top: -80px;
-  height: 75px;
-  width: 55px;
-  background-color: #99E2D0;
-  border: hidden;
-  margin-right: -18px;
-  border-radius: 0px 25px 25px 0px;
+#section-page-enchantee {
+  width: 360px;
+  border-radius: 45px 45px 0px 0px;
+  margin-top: -60px;
+  max-height: 1350px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.loaderr {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #9356DC;
+  border-bottom: 16px solid #FF79DA;
+  border-right: 16px solid #99E2D0;
+  -webkit-animation: spin 2s linear;
+          animation: spin 2s linear;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.backgroundd {
+  background-size: cover;
+  background-color: #F2F2F2;
+  opacity: 0.4;
+  height: 2320px;
+  width: 380px;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */
