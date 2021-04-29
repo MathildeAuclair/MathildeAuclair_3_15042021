@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -6,9 +5,9 @@
             transform: translateY(0);
   }
   80% {
-    opacity: 0.8;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    opacity: 0.6;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -16,6 +15,7 @@
             transform: translateY(0);
   }
 }
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -23,14 +23,78 @@
             transform: translateY(0);
   }
   80% {
-    opacity: 0.8;
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
+    opacity: 0.6;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes slideintop {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    color: #f175da;
+    opacity: 0.1;
+  }
+  25% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    color: #c565db;
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    color: #b160dc;
+    opacity: 0.8;
+  }
+  70% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 1;
+    color: #aa5ddc;
+  }
+}
+
+@keyframes slideintop {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    color: #f175da;
+    opacity: 0.1;
+  }
+  25% {
+    -webkit-transform: scale(0.25);
+            transform: scale(0.25);
+    color: #c565db;
+    opacity: 0.4;
+  }
+  50% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    color: #b160dc;
+    opacity: 0.8;
+  }
+  70% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 1;
+    color: #aa5ddc;
   }
 }
 
@@ -39,7 +103,7 @@
   font-size: 17px;
 }
 
-.fa-heart, .coeur, .fa-heart.menu {
+.fa-heart, .fa-heart.menu {
   color: black;
   font-size: 22px;
   float: right;
@@ -70,12 +134,13 @@
   border-bottom: black;
   font-family: 'Shrikhand';
   display: inline-block;
-  margin-left: 100px;
+  margin-left: 110px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  width: 360px;
+  width: 370px;
+  margin-left: -0px;
 }
 
 /* CSS Accueil version mobile */
@@ -140,9 +205,14 @@ body {
   margin-bottom: 40px;
 }
 
+.titre-fonctionnement {
+  margin-bottom: 25px;
+}
+
 .fonctionnement {
-  height: 300px;
+  height: 320px;
   margin-top: 50px;
+  margin-left: 10px;
 }
 
 .fonctionnement strong {
@@ -159,6 +229,7 @@ body {
       -ms-flex-direction: flex-start;
           flex-direction: flex-start;
   height: 60px;
+  width: 340px;
   border-radius: 20px 20px 20px 20px;
   background-color: #f6f6f6;
   margin-bottom: 20px;
@@ -171,7 +242,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   color: black;
-  width: 300px;
+  width: 280px;
   margin-left: 80px;
   margin-top: 19px;
 }
@@ -187,12 +258,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  margin-left: -90px;
+  width: 21px;
+  height: 21px;
+  border-radius: 20px;
+  margin-left: -85px;
   margin-right: 40px;
-  margin-top: -3px;
   background: #9356DC;
   color: white;
 }
@@ -215,13 +285,14 @@ body {
 
 section {
   height: 1350px;
-  width: 360px;
+  width: 370px;
   background-color: #f6f6f6;
 }
 
 section h2 {
   margin-top: 50px;
   margin-bottom: 35px;
+  margin-left: 10px;
   display: inline-block;
 }
 
@@ -230,6 +301,7 @@ section h2 {
   width: 350px;
   border-radius: 25px 25px 25px 25px;
   margin-bottom: 25px;
+  margin-left: 10px;
   -webkit-box-shadow: 3px 3px 3px #ebebeb;
           box-shadow: 3px 3px 3px #ebebeb;
 }
@@ -268,68 +340,58 @@ section h2 {
 
 .ville {
   margin-left: 10px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto',sans-serif;
   font-weight: 100;
 }
 
-.coeur::before {
-  content: "♡";
-  cursor: pointer;
-  position: absolute;
+.corazon {
+  z-index: 1;
+  width: 40px;
+  height: 50px;
+  float: right;
+  display: block;
+  margin-top: -80px;
+  margin-right: 8px;
 }
 
-.coeur:hover {
-  color: #f07de6;
+.coeur {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  z-index: 4;
+}
+
+.coeur:active {
+  color: #c565db;
   cursor: pointer;
-  opacity: 1;
-  -webkit-animation: 2s linear 1s slideintop;
-          animation: 2s linear 1s slideintop;
+  z-index: 6;
+}
+
+.kokoro {
+  color: white;
+  margin-top: -18px;
+  margin-right: 8px;
+}
+
+.kokoro:active {
+  font-size: 19px;
+  margin-top: -21px;
+  margin-right: 7px;
+  color: #c565db;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-}
-
-@-webkit-keyframes slideintop {
-  from {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    opacity: 1;
-    background-color: transparent;
-  }
-  to {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    opacity: 1;
-    background-color: #f07de6;
-  }
-}
-
-@keyframes slideintop {
-  from {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    opacity: 1;
-    background-color: transparent;
-  }
-  to {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-    opacity: 1;
-    background-color: #f07de6;
-  }
-}
-
-.coeur::after {
-  content: "♡";
-  color: #f07de6;
-  position: relative;
+  -webkit-animation: 3s linear slideintop;
+          animation: 3s linear slideintop;
   cursor: pointer;
-  opacity: 1;
+  display: inline-block;
+  visibility: visible;
 }
 
 footer {
   background-color: #353535;
-  height: 180px;
-  width: 360px;
+  height: 190px;
+  width: 370px;
 }
 
 footer li {
@@ -359,12 +421,13 @@ footer a {
   color: black;
   opacity: 1;
   font-size: 22px;
-  margin-right: -32px;
+  margin-right: -44px;
+  margin-left: 10px;
 }
 
 #menu-restaurant {
   height: 300px;
-  width: 360px;
+  width: 370px;
 }
 
 #section-page {
@@ -375,18 +438,54 @@ footer a {
   position: -webkit-sticky;
   position: sticky;
   height: 1260px;
+  width: 370px;
 }
 
 #nom-restaurant {
   font-family: 'Shrikhand', sans-serif;
   font-size: 25px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .fa-heart.menu {
-  margin-right: 20px;
+  margin-right: 32px;
+  margin-top: 58px;
   display: inline-block;
-  margin-top: 56px;
+  z-index: 4;
+}
+
+.fa-heart.menu:active {
+  color: #c565db;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.kokoro-menu {
+  color: white;
+  margin-top: -20px;
+  margin-right: 0;
+}
+
+.kokoro-menu:active {
+  font-size: 19px;
+  margin-top: -21px;
+  margin-right: 7px;
+  color: #c565db;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: 3s linear slideintop;
+          animation: 3s linear slideintop;
+  cursor: pointer;
+  display: inline-block;
+  visibility: visible;
+  margin-right: -1px;
+}
+
+.menu-coeur {
+  height: 40px;
+  width: 40px;
+  float: right;
+  z-index: 1;
 }
 
 .titre-majuscule {
@@ -421,14 +520,23 @@ footer a {
   -webkit-transform-origin: right 80%;
           transform-origin: right 80%;
   float: right;
-  display: inline-block;
+  display: block;
 }
 
-.coche:hover {
+.coche:active {
   cursor: pointer;
   opacity: 1;
-  -webkit-animation: glisse 2.5s;
-          animation: glisse 2.5s;
+  -webkit-animation-name: glisse;
+          animation-name: glisse;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 1;
 }
 
 @-webkit-keyframes glisse {
@@ -453,48 +561,24 @@ footer a {
   }
 }
 
-.coche::after {
-  -webkit-animation: glissade 2.5s;
-          animation: glissade 2.5s;
-}
-
-@-webkit-keyframes glissade {
-  50% {
-    -webkit-transform: scaleX(50%);
-            transform: scaleX(50%);
-  }
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-}
-
-@keyframes glissade {
-  50% {
-    -webkit-transform: scaleX(50%);
-            transform: scaleX(50%);
-  }
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-}
-
 .entrees {
-  -webkit-animation: fadein 2.5s;
-          animation: fadein 2.5s;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+  margin-left: 10px;
 }
 
 .plats {
-  -webkit-animation: fadein 2.5s;
-          animation: fadein 2.5s;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+  margin-left: 10px;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
 .desserts {
-  -webkit-animation: fadein 2.5s;
-          animation: fadein 2.5s;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+  margin-left: 10px;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -516,11 +600,47 @@ footer a {
 }
 
 .prix {
-  margin-top: -45px;
-  height: 20px;
+  margin-top: -35px;
+  height: 40px;
   max-width: 80px;
   margin-left: 280px;
   font-family: 'Roboto', sans-serif;
+}
+
+.prix:hover {
+  -webkit-animation-name: pousser;
+          animation-name: pousser;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+@-webkit-keyframes pousser {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+}
+
+@keyframes pousser {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
 }
 
 .btn-menu {
@@ -555,7 +675,60 @@ footer a {
   color: white;
   display: inline-block;
   font-size: 20px;
-  margin-left: 10px;
+  margin-left: 15px;
+  margin-top: -25px;
+  -webkit-animation-name: rotat, back;
+          animation-name: rotat, back;
+  -webkit-animation-delay: 0s, 4s;
+          animation-delay: 0s, 4s;
+  -webkit-animation-duration: 2.5s, 3s;
+          animation-duration: 2.5s, 3s;
+  -webkit-animation-iteration-count: 5, 5;
+          animation-iteration-count: 5, 5;
+}
+
+@-webkit-keyframes rotat {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotat {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes back {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes back {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 #section-page-enchantee {
@@ -567,11 +740,13 @@ footer a {
   position: sticky;
 }
 
-.loaderr {
+.loader {
   position: absolute;
+  z-index: 2;
   left: 50%;
   top: 50%;
-  z-index: 1;
+  opacity: 0;
+  z-index: -9999;
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
@@ -580,20 +755,28 @@ footer a {
   border-top: 16px solid #9356DC;
   border-bottom: 16px solid #FF79DA;
   border-right: 16px solid #99E2D0;
-  -webkit-animation: spin 2s linear;
-          animation: spin 2s linear;
-  -webkit-animation-iteration-count: 3;
-          animation-iteration-count: 3;
+  -webkit-animation-name: spin, apres;
+          animation-name: spin, apres;
+  -webkit-animation-duration: 2s, 2s;
+          animation-duration: 2s, 2s;
+  -webkit-animation-delay: 0s, 2s;
+          animation-delay: 0s, 2s;
+  -webkit-animation-iteration-count: 1, 1;
+          animation-iteration-count: 1, 1;
 }
 
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 1;
+    z-index: 8;
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 1;
+    z-index: 8;
   }
 }
 
@@ -601,19 +784,98 @@ footer a {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    opacity: 1;
+    z-index: 8;
   }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+    opacity: 1;
+    z-index: 8;
   }
 }
 
-.backgroundd {
+@-webkit-keyframes apres {
+  0% {
+    opacity: 1;
+    z-index: 6;
+  }
+  100% {
+    opacity: 0;
+    z-index: 3;
+  }
+}
+
+@keyframes apres {
+  0% {
+    opacity: 1;
+    z-index: 6;
+  }
+  100% {
+    opacity: 0;
+    z-index: 3;
+  }
+}
+
+.background {
   background-size: cover;
-  background-color: #F2F2F2;
-  opacity: 0.4;
+  background-color: whitesmoke;
+  z-index: -9999;
+  opacity: 0;
   height: 2320px;
-  width: 380px;
+  width: 370px;
   position: absolute;
+  -webkit-animation-name: fond, apress;
+          animation-name: fond, apress;
+  -webkit-animation-duration: 2s, 2s;
+          animation-duration: 2s, 2s;
+  -webkit-animation-delay: 0s, 2s;
+          animation-delay: 0s, 2s;
+  -webkit-animation-iteration-count: 1, 1;
+          animation-iteration-count: 1, 1;
+}
+
+@-webkit-keyframes fond {
+  0% {
+    opacity: 1;
+    z-index: 7;
+  }
+  100% {
+    opacity: 1;
+    z-index: 7;
+  }
+}
+
+@keyframes fond {
+  0% {
+    opacity: 1;
+    z-index: 7;
+  }
+  100% {
+    opacity: 1;
+    z-index: 7;
+  }
+}
+
+@-webkit-keyframes apress {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
+}
+
+@keyframes apress {
+  0% {
+    opacity: 1;
+    z-index: 5;
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
