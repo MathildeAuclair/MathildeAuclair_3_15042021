@@ -3,6 +3,7 @@
 @import './utils/variables';
 @import './utils/polices';
 
+/* CSS Accueil version mobile */ 
 .logo {
     @include logo;
 }
@@ -11,8 +12,6 @@ body {
     width: 370px;
     margin-left: -0px;
 }
-/* CSS Accueil version mobile */ 
-
 ::before {
     margin-right: 20px;
 }
@@ -212,6 +211,13 @@ footer {
     font-size: 22px;
     margin-right: -44px;
     margin-left: 10px;
+    margin-top: 35px;
+}
+#logo-menu {
+    font-family: 'Shrikhand', sans-serif;
+    margin-top: -35px;
+    text-align: center;
+    margin-left: 10px;
 }
 #menu-restaurant {
     height: 300px;
@@ -275,11 +281,11 @@ footer {
 }
 .coche {
     height: 75px;
-    width: 65px;
+    width: 50px;
     background-color: $third-color;
     border: hidden;
     margin-left: 290px;
-    margin-top: -65px;
+    margin-top: -26px;
     border-radius: 0px 25px 25px 0px;
     opacity: 0;
     overflow: auto;
@@ -291,7 +297,7 @@ footer {
     cursor: pointer;
     opacity: 1;
     animation-name: glisse;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-iteration-count: 2;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -328,20 +334,20 @@ footer {
     font-family: 'Roboto', sans-serif; font-weight: 100;
     margin-left: 13px;
     max-width: 240px;
-    font-size: 15px;
+    font-size: 14px;
     margin-left: 15px;
     margin-top: -10px;
 }
 .prix {
-     margin-top: -35px;
-     height: 40px;
-     max-width: 80px;
-     margin-left: 280px;
+     margin-top: -32px;
+     height: 60px;
+     width: 30px;
+     margin-left: 285px;
      font-family: 'Roboto', sans-serif;
 }
 .prix:hover {
     animation-name: pousser;
-    animation-duration: 3.5s;
+    animation-duration: 3.75s;
     animation-iteration-count: 1;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -352,7 +358,7 @@ footer {
   transform: translateX(0);
 }
     50%{
-  transform: translateX(-60%);
+  transform: translateX(-85%);
 }
 }
 .btn-menu {
@@ -378,9 +384,9 @@ footer {
     background-color: $third-color;
     color: white;
     display: inline-block;
-    font-size: 20px;
-    margin-left: 15px;
-    margin-top: -25px;
+    font-size: 22px;
+    margin-left: 5px;
+    margin-top: -10px;
     animation-name: rotat, back;
     animation-delay: 0s, 4s;
     animation-duration: 2.5s, 3s;
@@ -468,3 +474,316 @@ footer {
         z-index: 1;
     }
    } 
+
+/* Paramétrage Tablette */
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+.logo {
+    margin-left: 120px;
+    width: 800px;
+    text-align: center;
+}
+#logo-menu { 
+    width: 800px;
+    text-align: center;
+    margin-left: 120px;
+}
+.localisation {
+    width: 1024px;
+}
+.presentation {
+    width: 1024px;
+    text-align: center;
+    height: 250px;
+}
+#decouvrez {
+    margin-left: 280px;
+    margin-top: 40px;
+}
+#reservez {
+    margin-left: 340px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.btn {
+    margin-left: 30px;
+}
+.titre-fonctionnement {
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+.fonctionnement {
+  width: 450px;
+  margin-left: 345px;
+}
+section {
+    width: 800px;
+    height: 1450px;
+    margin-left: 100px;
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.box {
+    margin-bottom: 70px;
+    margin-left: 80px;
+    width: 650px;
+    height: 290px;
+}
+.restaurant {
+    width: 650px;
+}
+#resto {
+    text-align: center;
+}
+.ville {
+    margin-top: 35px;
+    margin-left: -100px;
+}
+.nouveau {
+    margin-left: 530px;
+}
+.corazon {
+    margin-left: 650px;
+}
+.coeur {
+    margin-top: -62px;
+}
+footer {
+    width: 1024px;
+    height: 130px;
+    display: flex;
+    align-content: flex-start;
+}
+.titre-footer {
+    margin-right: 40px;
+}
+.lien-footer {
+    max-width: 1000px;
+    display: flex;
+    align-content: flex-start;
+}
+footer.li {
+    width: 1000px;
+    margin-right: 180px;
+}
+.texte-footer {
+    margin-right: 70px;
+    margin-top: 6px;
+}
+.background {
+    width: 1024px;
+    height: 2335px;
+}
+/* CSS Pages tablettes */
+html {
+    height: 1200px;
+    width: 1024px;
+}
+#fleche {
+    margin-top: 30px;
+}
+#menu-restaurant {
+    width: 1024px;
+    min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+	object-fit: cover;
+}
+#section-page {
+    width: 800px;
+    height: 950px;
+    margin-left: 120px;
+}
+#section-page-enchantee {
+    width: 800px;
+    height: 950px;
+    margin-left: 120px;
+}
+.far.fa-heart.menu {
+    margin-right: -650px;
+    margin-top: -65px;
+}
+#nom-restaurant {
+    margin-left: 60px;
+    font-size: 30px;
+}
+.entrees {
+    margin-left: 60px;
+    margin-top: -10px;
+}
+.plats {
+    margin-left: 60px;
+    margin-top: -10px;
+}
+.desserts {
+    margin-left: 60px;
+    margin-top: -10px;
+}
+.btn-menu {
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+.btn-menu-enchantee {
+    margin-left: 300px;
+    margin-bottom: 50px;
+}
+}
+
+/* Paramétrage Desktop */
+
+@media only screen and (min-width: 1024px) and (max-width: 9999px) {
+
+    .logo {
+        margin-left: 100px;
+        width: 1200px;
+        text-align: center;
+    }
+    #logo-menu { 
+        width: 1440px;
+        text-align: center;
+    }
+    .localisation {
+        width: 1440px;
+        h2 {
+            margin-left: -60px;
+        }
+    }
+    input.btn {
+        margin-left: -30px;
+    }
+    .presentation {
+        width: 1440px;
+        text-align: center;
+        height: 250px;
+    }
+    #decouvrez {
+        margin-left: 450px;
+        margin-top: 40px;
+    }
+    #reservez {
+        margin-left: 510px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .btn {
+        margin-left: 30px;
+    }
+    .titre-fonctionnement {
+        margin-left: 80px;
+        margin-bottom: 30px;
+    }
+    .fonctionnement {
+      width: 450px;
+      margin-left: 550px;
+    }
+    section {
+        width: 1100px;
+        height: 1430px;
+        margin-left: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .box {
+        margin-bottom: 70px;
+        margin-left: 125px;
+        width: 850px;
+        height: 290px;
+    }
+    .restaurant {
+        width: 850px;
+    }
+    #resto {
+        text-align: center;
+    }
+    .ville {
+        margin-top: 35px;
+        margin-left: -100px;
+    }
+    .nouveau {
+        margin-left: 740px;
+    }
+    .corazon {
+        margin-left: 880px;
+    }
+    .coeur {
+        margin-top: -62px;
+    }
+    footer {
+        width: 1440px;
+        height: 130px;
+        display: flex;
+        align-content: flex-start;
+    }
+    .titre-footer {
+        margin-right: 40px;
+    }
+    .lien-footer {
+        max-width: 1000px;
+        display: flex;
+        align-content: flex-start;
+    }
+    .texte-footer {
+        margin-right: 120px;
+        margin-top: 6px;
+    }
+    .background {
+        width: 1440px;
+        height: 2314px;
+    }
+    /* CSS Pages tablettes */
+    html {
+        height: 1200px;
+        width: 1440px;
+    }
+    #fleche {
+        margin-top: 30px;
+    }
+    #menu-restaurant {
+        width: 1440px;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    #section-page {
+        width: 1000px;
+        height: 950px;
+        margin-left: 220px;
+    }
+    #section-page-enchantee {
+        width: 1000px;
+        height: 950px;
+        margin-left: 260px;
+    }
+    .far.fa-heart.menu {
+        margin-right: -800px;
+        margin-top: -65px;
+    }
+    #nom-restaurant {
+        margin-left: 145px;
+        font-size: 30px;
+    }
+    .entrees {
+        margin-left: 145px;
+        margin-top: -10px;
+    }
+    .plats {
+        margin-left: 145px;
+        margin-top: -10px;
+    }
+    .desserts {
+        margin-left: 145px;
+        margin-top: -10px;
+    }
+    input.btn-menu {
+        margin-left: 400px;
+        margin-bottom: 50px;
+    }
+    input.btn-menu-enchantee {
+        margin-left: 400px;
+        margin-bottom: 50px;
+    }
+    }
