@@ -224,10 +224,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: flex-start;
-          flex-direction: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   height: 60px;
   width: 340px;
   border-radius: 20px 20px 20px 20px;
@@ -261,7 +259,7 @@ body {
   width: 21px;
   height: 21px;
   border-radius: 20px;
-  margin-left: -85px;
+  margin-left: -88px;
   margin-right: 40px;
   background: #9356DC;
   color: white;
@@ -506,67 +504,81 @@ footer a {
 }
 
 .bloc-menu {
-  height: 75px;
+  display: inline-block;
   width: 340px;
+  height: 80px;
+  font-size: 18px;
   border-radius: 25px 25px 25px 25px;
   background-color: #FFF;
-  display: inline-block;
-  margin-bottom: 15px;
+  font-family: sans-serif;
+  text-decoration: none;
+  position: relative;
   cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.coche {
-  height: 75px;
-  width: 50px;
-  background-color: #99E2D0;
-  border: hidden;
-  margin-left: 290px;
-  margin-top: -26px;
-  border-radius: 0px 25px 25px 0px;
-  opacity: 0;
-  overflow: auto;
-  -webkit-transform-origin: right 80%;
-          transform-origin: right 80%;
-  float: right;
+.bloc-menu i {
   display: block;
+  float: right;
+  margin-top: -78px;
+  color: #FFF;
+  z-index: -10;
+  background-color: #99E2D0;
 }
 
-.coche:active {
+.bloc-menu i:hover:after {
+  z-index: 4;
+}
+
+.bloc-menu:after {
+  position: absolute;
+  content: "";
+  vertical-align: -0.125em;
+  color: white;
+  top: 0;
+  right: 0;
+  width: 0;
+  border-radius: 0px 25px 25px 0px;
+  height: 100%;
+  background: #99E2D0;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.decalage {
+  height: 75px;
+  width: 280px;
+  display: inline-block;
+  background-color: transparent;
+  font-family: sans-serif;
+  text-decoration: none;
+  position: relative;
   cursor: pointer;
+}
+
+.decalage:after {
+  position: absolute;
+  content: "";
+  vertical-align: -0.125em;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  border-radius: 25px 0px 0px 25px;
+  background: yellow;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+.bloc-menu:hover:after {
+  width: 20%;
   opacity: 1;
-  -webkit-animation-name: glisse;
-          animation-name: glisse;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: 2;
-          animation-iteration-count: 2;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  z-index: 1;
 }
 
-@-webkit-keyframes glisse {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  50% {
-    -webkit-transform: scaleX(50%);
-            transform: scaleX(50%);
-  }
-}
-
-@keyframes glisse {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  50% {
-    -webkit-transform: scaleX(50%);
-            transform: scaleX(50%);
-  }
+.decalage:hover:after {
+  width: 85%;
+  opacity: 1;
 }
 
 .entrees {
@@ -678,67 +690,6 @@ footer a {
   position: sticky;
 }
 
-.fa-check-circle {
-  background-color: #99E2D0;
-  color: white;
-  display: inline-block;
-  font-size: 22px;
-  margin-left: 5px;
-  margin-top: -10px;
-  -webkit-animation-name: rotat, back;
-          animation-name: rotat, back;
-  -webkit-animation-delay: 0s, 4s;
-          animation-delay: 0s, 4s;
-  -webkit-animation-duration: 2.5s, 3s;
-          animation-duration: 2.5s, 3s;
-  -webkit-animation-iteration-count: 5, 5;
-          animation-iteration-count: 5, 5;
-}
-
-@-webkit-keyframes rotat {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotat {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes back {
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes back {
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
 #section-page-enchantee {
   width: 360px;
   border-radius: 45px 45px 0px 0px;
@@ -830,7 +781,7 @@ footer a {
   background-color: whitesmoke;
   z-index: -9999;
   opacity: 0;
-  height: 2320px;
+  height: 2346px;
   width: 370px;
   position: absolute;
   -webkit-animation-name: fond, apress;
@@ -1061,6 +1012,8 @@ footer a {
     margin-left: 100px;
     width: 1200px;
     text-align: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   #logo-menu {
     width: 1440px;
