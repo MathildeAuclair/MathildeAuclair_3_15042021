@@ -155,7 +155,8 @@ section {
     @extend %couleur-coeur;
 }
 .coeur {
-    display: block;
+    display: flex;
+    float: right;
     margin-top: -68px;
     height: 40px;
     width: 40px;
@@ -169,7 +170,7 @@ section {
     font-weight: bold;
     color: white;
     z-index: 5;
-    font-size: 26px;
+    font-size: 27px;
     transform-origin: bottom;
     position: absolute;
     margin-left: -20px;
@@ -187,7 +188,7 @@ section {
 }
 .kokoro::before {
     margin-top: -30px;
-    margin-left: -22px;
+    margin-left: -32px;
     font-size: 30px;
     z-index: 3;
     position: absolute;
@@ -242,13 +243,14 @@ html {
     z-index: 1;
 }
 .fa-heart.menu {
-    display: block;
+    display: flex;
+    float: right;
     height: 40px;
     width: 40px;
     cursor: pointer;
     color: black;
-    margin-top: 73px;
-    margin-right: 15px;
+    margin-top: 78px;
+    margin-right: 20px;
     border: none;
     background-color: transparent;
     outline: 0;
@@ -260,7 +262,6 @@ html {
     font-size: 26px;
     transform-origin: bottom;
     position: absolute;
-    margin-left: -20px;
     margin-top: -26px;
 }
 .fa-heart.menu:hover::before {
@@ -270,12 +271,11 @@ html {
     display: block;
     color: black;
     z-index: 3;
-    margin-right: 3px;
     margin-top: 3px;
+    margin-left: -13px;
 }
 .kokoro-menu::before {
     margin-top: -30px;
-    margin-left: -22px;
     font-size: 30px;
     z-index: 3;
     position: absolute;
@@ -538,8 +538,8 @@ html {
         margin-left: 450px;
     }
     i.kokoro {
-        margin-right: -500px;
         margin-top: -65px;
+        margin-right: -501.5px;
     }
     .coeur::before {
         margin-top: -94px;
@@ -591,8 +591,13 @@ html {
         height: 1300px;
     }
     .fa-heart.menu {
-        margin-left: 520px;
+        display: flex;
+        float: right;
+        margin-left: 500px;
         margin-top: -45px;
+    }
+    .kokoro-menu {
+        margin-left: -13px;
     }
     #nom-restaurant {
         margin-left: 60px;
@@ -679,7 +684,7 @@ section {
     margin-left: 530px;
 }
 i.kokoro {
-    margin-right: -670px;
+    margin-right: -671.5px;
     margin-top: -65px;
 }
 .coeur::before {
@@ -733,8 +738,13 @@ html {
     margin-left: 120px;
 }
 .fa-heart.menu {
+    display: flex;
+    float: right;
     margin-left: 690px;
     margin-top: -57px;
+}
+.kokoro-menu {
+    margin-left: -13px;
 }
 #nom-restaurant {
     margin-left: 60px;
@@ -832,6 +842,7 @@ html {
     }
     .fa-heart.kokoro {
         margin-top: -64px;
+        margin-right: 1.5px;
     }
     footer {
         width: 1440px;
@@ -881,8 +892,13 @@ html {
         margin-left: 260px;
     }
     .fa-heart.menu {
+        display: flex;
+        float: right;
         margin-left: 800px;
         margin-top: -52px;
+    }
+    .kokoro-menu {
+        margin-left: -13px;
     }
     #nom-restaurant {
         margin-left: 145px;
