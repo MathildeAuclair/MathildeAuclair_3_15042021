@@ -142,6 +142,7 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 370px;
   margin-left: -0px;
+  max-height: 2300px;
 }
 
 ::before {
@@ -265,15 +266,7 @@ body {
   color: white;
 }
 
-#telephone:hover {
-  color: #9356DC;
-}
-
-#liste:hover {
-  color: #9356DC;
-}
-
-#shop:hover {
+#telephone:hover, #liste:hover, #shop:hover {
   color: #9356DC;
 }
 
@@ -356,8 +349,6 @@ section h2 {
 
 .coeur::before {
   font-weight: bold;
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
   color: white;
   z-index: 5;
   font-size: 26px;
@@ -369,41 +360,9 @@ section h2 {
 }
 
 .coeur:hover::before {
+  color: violet;
   -webkit-animation: 2s linear slideintop;
           animation: 2s linear slideintop;
-  color: violet;
-}
-
-@keyframes slideintop {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-  10% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    color: #f175da;
-    opacity: 0.1;
-  }
-  25% {
-    -webkit-transform: scale(0.25);
-            transform: scale(0.25);
-    color: #c565db;
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    color: #b160dc;
-    opacity: 0.8;
-  }
-  70% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    opacity: 1;
-    color: #aa5ddc;
-  }
 }
 
 .kokoro {
@@ -457,6 +416,10 @@ footer a {
 }
 
 /* CSS des 4 Menus */
+html {
+  height: 1200px;
+}
+
 #fleche {
   color: black;
   opacity: 1;
@@ -479,7 +442,7 @@ footer a {
 }
 
 #section-page {
-  width: 360px;
+  width: 370px;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
   max-height: 1350px;
@@ -517,8 +480,6 @@ footer a {
 
 .fa-heart.menu::before {
   font-weight: bold;
-  -webkit-transition: color 1s ease-in-out;
-  transition: color 1s ease-in-out;
   color: white;
   z-index: 5;
   font-size: 26px;
@@ -530,41 +491,9 @@ footer a {
 }
 
 .fa-heart.menu:hover::before {
+  color: violet;
   -webkit-animation: 2s linear slideintop;
           animation: 2s linear slideintop;
-  color: violet;
-}
-
-@keyframes slideintop {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 0;
-  }
-  10% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-    color: #f175da;
-    opacity: 0.1;
-  }
-  25% {
-    -webkit-transform: scale(0.25);
-            transform: scale(0.25);
-    color: #c565db;
-    opacity: 0.4;
-  }
-  50% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    color: #b160dc;
-    opacity: 0.8;
-  }
-  70% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-    opacity: 1;
-    color: #aa5ddc;
-  }
 }
 
 .kokoro-menu {
@@ -609,7 +538,6 @@ footer a {
   position: relative;
   cursor: pointer;
   margin-bottom: 10px;
-  white-space: 30px;
   z-index: 0;
 }
 
@@ -634,11 +562,9 @@ footer a {
   width: 15%;
   opacity: 1;
   z-index: 0;
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
 }
 
-.hola {
+.boite {
   display: block;
   margin-left: 305px;
   margin-top: -82px;
@@ -649,7 +575,7 @@ footer a {
   display: none;
 }
 
-.bloc-menu:hover .hola {
+.bloc-menu:hover .boite {
   position: absolute;
   display: block;
   opacity: 1;
@@ -697,23 +623,23 @@ footer a {
 }
 
 .entrees {
+  margin-left: 10px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
-  margin-left: 10px;
 }
 
 .plats {
+  margin-left: 10px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
-  margin-left: 10px;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
 .desserts {
+  margin-left: 10px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
-  margin-left: 10px;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -743,11 +669,7 @@ footer a {
   font-family: 'Roboto', sans-serif;
 }
 
-.btn-menu {
-  margin-top: 30px;
-}
-
-.btn-menu-enchantee {
+.btn-menu, .btn-menu-enchantee {
   margin-top: 30px;
 }
 
@@ -761,17 +683,8 @@ footer a {
   text-overflow: ellipsis;
 }
 
-#menu.exception {
-  width: 360px;
-  border-radius: 45px 45px 0px 0px;
-  margin-top: -60px;
-  max-height: 1350px;
-  position: -webkit-sticky;
-  position: sticky;
-}
-
-#section-page-enchantee {
-  width: 360px;
+#menu.exception, #section-page-enchantee {
+  width: 370px;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
   max-height: 1350px;
@@ -861,7 +774,7 @@ footer a {
   background-color: whitesmoke;
   z-index: -9999;
   opacity: 0;
-  height: 2346px;
+  height: 2345px;
   width: 370px;
   position: absolute;
   -webkit-animation-name: fond, apress;
@@ -920,15 +833,10 @@ footer a {
 
 /* Paramétrage Tablette */
 @media only screen and (min-width: 600px) and (max-width: 720px) {
-  .logo {
+  .logo, #logo-menu {
     margin-left: 110px;
     width: 550px;
     text-align: center;
-  }
-  #logo-menu {
-    width: 550px;
-    text-align: center;
-    margin-left: 110px;
   }
   .localisation {
     width: 754px;
@@ -1064,34 +972,21 @@ footer a {
     margin-left: 60px;
     margin-top: 5px;
   }
-  .plats {
+  .plats, .desserts {
     margin-left: 60px;
     margin-top: -10px;
   }
-  .desserts {
-    margin-left: 60px;
-    margin-top: -10px;
-  }
-  .btn-menu {
-    margin-left: 220px;
-    margin-bottom: 50px;
-  }
-  .btn-menu-enchantee {
+  .btn-menu, .btn-menu-enchantee {
     margin-left: 220px;
     margin-bottom: 50px;
   }
 }
 
 @media only screen and (min-width: 720px) and (max-width: 1024px) {
-  .logo {
+  .logo, #logo-menu {
     margin-left: 120px;
     width: 800px;
     text-align: center;
-  }
-  #logo-menu {
-    width: 800px;
-    text-align: center;
-    margin-left: 120px;
   }
   .localisation {
     width: 1024px;
@@ -1221,12 +1116,7 @@ footer a {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #section-page {
-    width: 800px;
-    height: 950px;
-    margin-left: 120px;
-  }
-  #section-page-enchantee {
+  #section-page, #section-page-enchantee {
     width: 800px;
     height: 950px;
     margin-left: 120px;
@@ -1239,23 +1129,11 @@ footer a {
     margin-left: 60px;
     font-size: 30px;
   }
-  .entrees {
+  .entrees, .plats, .desserts {
     margin-left: 60px;
     margin-top: -10px;
   }
-  .plats {
-    margin-left: 60px;
-    margin-top: -10px;
-  }
-  .desserts {
-    margin-left: 60px;
-    margin-top: -10px;
-  }
-  .btn-menu {
-    margin-left: 300px;
-    margin-bottom: 50px;
-  }
-  .btn-menu-enchantee {
+  .btn-menu, .btn-menu-enchantee {
     margin-left: 300px;
     margin-bottom: 50px;
   }
@@ -1413,23 +1291,11 @@ footer a {
     margin-left: 145px;
     font-size: 30px;
   }
-  .entrees {
+  .entrees, .plats, .desserts {
     margin-left: 145px;
     margin-top: -10px;
   }
-  .plats {
-    margin-left: 145px;
-    margin-top: -10px;
-  }
-  .desserts {
-    margin-left: 145px;
-    margin-top: -10px;
-  }
-  input.btn-menu {
-    margin-left: 400px;
-    margin-bottom: 50px;
-  }
-  input.btn-menu-enchantee {
+  input.btn-menu, input.btn-menu-enchantee {
     margin-left: 400px;
     margin-bottom: 50px;
   }
