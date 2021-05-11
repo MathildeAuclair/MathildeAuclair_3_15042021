@@ -3,6 +3,7 @@
 @import './utils/variables';
 @import './utils/polices';
 
+
 /* CSS Accueil version mobile */ 
 .logo {
     @include logo;
@@ -174,7 +175,7 @@ section {
     transform-origin: bottom;
     position: absolute;
     margin-left: -20px;
-    margin-top: -26px;
+    margin-top: -16px;
 }
 .coeur:hover::before {
    @include kokoro;
@@ -187,7 +188,7 @@ section {
     margin-top: 3px;
 }
 .kokoro::before {
-    margin-top: -30px;
+    margin-top: -20px;
     margin-left: -32px;
     font-size: 30px;
     z-index: 3;
@@ -471,7 +472,7 @@ html {
     100% { opacity: 0;
         z-index: 1;
     }
-   } 
+   }  
 /* Paramétrage Tablette */
 
 @media only screen and (min-width: 600px) and (max-width: 720px) {
@@ -538,12 +539,12 @@ html {
         margin-left: 450px;
     }
     i.kokoro {
-        margin-top: -65px;
-        margin-right: -501.5px;
+        margin-top: -57px;
+        margin-left: 523px;
     }
     .coeur::before {
-        margin-top: -94px;
-        margin-left: 483px;
+        margin-top: -77px;
+        margin-left: 492px;
     }
     footer {
         width: 724px;
@@ -684,11 +685,11 @@ section {
     margin-left: 530px;
 }
 i.kokoro {
-    margin-right: -671.5px;
-    margin-top: -65px;
+    margin-left: 684px;
+    margin-top: -63px;
 }
 .coeur::before {
-    margin-top: -94px;
+    margin-top: -82px;
     margin-left: 653px;
 }
 footer {
@@ -741,7 +742,7 @@ html {
     display: flex;
     float: right;
     margin-left: 690px;
-    margin-top: -57px;
+    margin-top: -51px;
 }
 .kokoro-menu {
     margin-left: -13px;
@@ -838,7 +839,7 @@ html {
         margin-left: 880px;
     }
     .fa-heart.coeur::before {
-        margin-top: -93px;
+        margin-top: -83px;
     }
     .fa-heart.kokoro {
         margin-top: -64px;
