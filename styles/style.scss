@@ -90,10 +90,10 @@ body {
     background: $primary-color;
     color: white;
 }
-#telephone, #liste, #shop {
+.fa-mobile-alt, .fa-list-ul, .fa-store {
     @extend %couleur-icone;
 }
-#telephone:hover, #liste:hover, #shop:hover {
+.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
     color: $primary-color;
 }
 ::marker {
