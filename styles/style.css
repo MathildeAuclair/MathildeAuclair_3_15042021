@@ -98,7 +98,7 @@
   }
 }
 
-#telephone, #liste, #shop {
+.fa-mobile-alt, .fa-list-ul, .fa-store {
   color: #7e7e7e;
   font-size: 17px;
 }
@@ -265,7 +265,7 @@ body {
   color: white;
 }
 
-#telephone:hover, #liste:hover, #shop:hover {
+.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
   color: #9356DC;
 }
 
@@ -626,13 +626,13 @@ html {
 }
 
 .entrees {
-  margin-left: 10px;
+  margin-left: 15px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
 }
 
 .plats {
-  margin-left: 10px;
+  margin-left: 15px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
   -webkit-animation-delay: 0.2s;
@@ -640,7 +640,7 @@ html {
 }
 
 .desserts {
-  margin-left: 10px;
+  margin-left: 15px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
   -webkit-animation-delay: 0.3s;
