@@ -1,11 +1,13 @@
 @mixin logo {
     font-size: 30px;
     height: 50px;
-    width: 180px;
+    min-width: 180px;
     border-bottom: black;
     font-family: 'Shrikhand';
-    display: inline-block;
-    margin-left: 110px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10px;
 }
 
 @mixin btn {
@@ -17,7 +19,8 @@
     border-radius: 30px 30px 30px 30px;
     border: 2px white solid;
     border-color: rgb(246, 246, 246);
-    margin-left: 90px;
+    margin-left: 20px;
+    margin-bottom: 20px;
     
     &.btn:hover {
            background: rgb(240, 125, 230);
@@ -52,14 +55,15 @@
     font-size: 18px;
 }
 @mixin marges-page {
-    width: 370px;
+    width: auto;
     border-radius: 45px 45px 0px 0px;
     margin-top: -60px;
     max-height: 1350px;
+    display: flex;
     position: sticky;
 }
 @mixin menu {
-    margin-left: 10px;
+    margin-left: 15px;
     animation: fadein 3s;
   }
   @keyframes fadein {
@@ -78,7 +82,7 @@
   }
 
 @mixin kokoro {
-    color: violet;
+    background: $survol;
     animation: 2s linear slideintop;
 }
 @keyframes slideintop {
