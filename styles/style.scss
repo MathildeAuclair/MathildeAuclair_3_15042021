@@ -11,7 +11,7 @@
 }
 body {
     font-family: 'Roboto', sans-serif;
-    width: auto;
+    min-width: 320px;
     margin-left: -0px;
     max-height: 2245px;
 }
@@ -140,12 +140,13 @@ section {
 .box {
     @extend %affichage-box;
 	background-color: #FFFFFF;
-    width: auto;
+    min-width: 300px;
     display: block;
     flex-wrap: wrap;
 	border-radius: 25px 25px 25px 25px;
 	margin-bottom: 25px;
     height: 280px;
+    margin-left: 5px;
 	box-shadow: 3px 3px 3px rgb(235,235,235);
 }
 .restaurant {
@@ -178,28 +179,24 @@ section {
 .titre-box { 
     @extend %affichage-box;
     margin-right: 30px;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: -30px;
    }
 .ville {
     @extend %affichage-box;
-    margin-right: 300px;
-    margin-left: 10px;
+    margin-right: 200px;
+    margin-left: 5px;
+    width: 110px;
     font-family: 'Roboto',sans-serif; font-weight: 100;
 }
 .fa-heart {
     @extend %couleur-coeur;
 }
-.fas.fa-heart {
-        margin-left: 350px;
-        margin-top: 330px;
-        position: absolute;
-        right: 0;
-}
 .coeur {
     display: flex;
     float: right;
-    margin-top: -68px;
+    margin-top: -95px;
+    margin-left: 330px;
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -210,7 +207,7 @@ section {
 }
 .coeur::before {
     font-weight: bold;
-    color: white;
+    color: transparent;
     z-index: 5;
     font-size: 27px;
     transform-origin: bottom;
@@ -237,7 +234,7 @@ section {
     color: black;
 }
 .kokoro:hover::before {
-    background: $survol;
+    color: rgb(170, 93, 220);
     z-index: 2;
 }
 footer {
@@ -250,10 +247,11 @@ footer {
 /* CSS des 4 Menus */
 
 html {
-    height: 1200px;
-    width: auto;
+    max-height: 1177px;
+    min-width: auto;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: -20px;
 }
 #fleche {
     color: black;
@@ -325,7 +323,7 @@ html {
 }
 .fa-heart.menu::before {
     font-weight: bold;
-    color: white;
+    color: transparent;
     z-index: 5;
     font-size: 26px;
     transform-origin: bottom;
@@ -350,7 +348,7 @@ html {
     color: black;
 }
 .kokoro-menu:hover::before {
-    color: violet;
+    color: rgb(170, 93, 220);
     z-index: 2;
 }
 .titre-majuscule {
@@ -372,7 +370,6 @@ html {
     position: relative;
     cursor: pointer;
     margin-bottom: 10px;
-    padding-right: 5px;
     z-index: 0;
   }
 .bloc-menu:after {
@@ -443,15 +440,42 @@ html {
 .ligne-1 {
     font-size: 16px;
     margin-left: 5px;
-    max-width: 240px;
+    width: 300px;
+    opacity: 1;
 }
 .ligne-2 {
     font-family: 'Roboto', sans-serif; font-weight: 100;
-    max-width: 240px;
+    width: auto;
     font-size: 14px;
     margin-left: 5px;
     margin-top: -10px;
     opacity: 1;
+}
+.test {
+    height: 80px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 0;
+ }
+ .test:after {
+    position: absolute;
+    content: '';
+   vertical-align: -0.125em;
+   display: flex;
+   box-sizing: border-box;
+   background-color: red;
+   top: 0;
+   left: 0;
+   width: 70%;
+   height: 100%;
+   transition: all .35s;
+}
+.test:hover:after {
+    width: 60%;
 }
 .prix {
      margin-top: -32px;
@@ -460,6 +484,8 @@ html {
      font-size: 16px;
      margin-left: 260px;
      font-family: 'Roboto', sans-serif;
+     display: flex;
+     box-sizing: border-box;
 }
 .btn-menu, .btn-menu-enchantee {
     @extend .btn;
@@ -476,9 +502,16 @@ html {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 200px;
 }
-#menu.exception, #section-page-enchantee {
+#section-page-enchantee {
     @include marges-page;
+    height: auto;
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 .loader {
   position: absolute;
@@ -518,13 +551,13 @@ html {
         z-index: 3;
     }
    } 
- .background {
+   .background {
     background-size: cover;
     background-color: whitesmoke;
     z-index: -9999;
     opacity: 0;
-    height: 2245px;
-    width: 370px;
+    width: 100%;
+    height: 2283px;
     position: absolute;
     animation-name: fond, apress;
     animation-duration: 2s, 2s;
