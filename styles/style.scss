@@ -359,18 +359,33 @@ html {
     padding-bottom: 0.3em;
 }
 .bloc-menu {
-    display: inline-block;
+    display: inline-flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     height: 80px;
     font-size: 18px;
     border-radius: 25px 25px 25px 25px;
     background-color: #FFF;
     font-family: sans-serif;
     position: relative;
+    transform-origin: left;
     cursor: pointer;
     margin-bottom: 10px;
     z-index: 0;
+         &:hover span {
+             transform: translateX(-60%);
+             margin-right: 50px;
+         }
+}
+.prix {
+    transform: scale(1);
+    transition: transform 330ms linear;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    margin-left: 240px;
+    margin-top: -20px; 
 }
 .bloc-menu:after {
     position: absolute;
@@ -388,23 +403,27 @@ html {
     z-index: 0;
   }
 .bloc-menu:hover:after{
-    width: 15%;
+    width: 18%;
     opacity: 1;
     z-index: 0;
   }
 .boite {
-        display: block;
-        margin-left: 305px;
-        margin-top: -82px;
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
+        margin-top: -42px;
+        margin-left: 87%;
         width: 30px;
         height: 30px;
-        font-size: 18px;
+        font-size: 24px;
         background-color: white;
         display: none;
   }
 .bloc-menu:hover .boite {
-        position: absolute;
-        display: block;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
         opacity: 1;
         z-index: 10;
         background-color: $third-color;
@@ -440,29 +459,17 @@ html {
 .ligne-1 {
     font-size: 16px;
     margin-left: 5px;
-    width: 35%;
+    width: 50%;
     opacity: 1;
  }
 .ligne-2 {
     font-family: 'Roboto', sans-serif; font-weight: 100;
-    width: 35%;
+    width: 50%;
     font-size: 14px;
-    margin-left: 5px;
-    margin-top: -10px;
+    margin-top: 40px;
     opacity: 1;
-}
-.prix {
-     margin-top: -38px;
-     margin-right: 20px;
-     height: 60px;
-     width: 20px;
-     display: flex;
-     flex-wrap: wrap;
-     float: right;
-     font-size: 16px;
-     margin-left: 260px;
-     font-family: 'Roboto', sans-serif;
-     box-sizing: border-box;
+    margin-left: 5px;
+    position: absolute;
 }
 .btn-menu, .btn-menu-enchantee {
     @extend .btn;
@@ -479,7 +486,7 @@ html {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 45%;
+    width: 48%;
 }
 #section-page-enchantee {
     @include marges-page;
