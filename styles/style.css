@@ -679,7 +679,7 @@ html {
   display: inline-block;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 340px;
+  width: 90%;
   height: 80px;
   font-size: 18px;
   border-radius: 25px 25px 25px 25px;
@@ -798,71 +798,34 @@ html {
 .ligne-1 {
   font-size: 16px;
   margin-left: 5px;
-  width: 300px;
+  width: 35%;
   opacity: 1;
 }
 
 .ligne-2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  width: auto;
+  width: 35%;
   font-size: 14px;
   margin-left: 5px;
   margin-top: -10px;
   opacity: 1;
 }
 
-.test {
-  height: 80px;
-  width: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  height: 100%;
-  min-width: 0;
-}
-
-.test:after {
-  position: absolute;
-  content: '';
-  vertical-align: -0.125em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: red;
-  top: 0;
-  left: 0;
-  width: 70%;
-  height: 100%;
-  -webkit-transition: all .35s;
-  transition: all .35s;
-}
-
-.test:hover:after {
-  width: 60%;
-}
-
 .prix {
-  margin-top: -32px;
+  margin-top: -38px;
+  margin-right: 20px;
   height: 60px;
   width: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: right;
   font-size: 16px;
   margin-left: 260px;
   font-family: 'Roboto', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -888,7 +851,7 @@ html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 200px;
+  width: 45%;
 }
 
 #section-page-enchantee {
