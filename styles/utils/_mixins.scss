@@ -56,9 +56,9 @@
 }
 @mixin marges-page {
     width: auto;
+    height: auto;
     border-radius: 45px 45px 0px 0px;
     margin-top: -60px;
-    max-height: 1350px;
     display: flex;
     position: sticky;
 }
@@ -82,7 +82,9 @@
   }
 
 @mixin kokoro {
-    background: $survol;
+    border: hidden;
+    color: rgb(210, 105, 219);
+    outline: 0;
     animation: 2s linear slideintop;
 }
 @keyframes slideintop {
@@ -91,22 +93,27 @@
     opacity: 0;
 }
 10% {
-    transform: scale(0.20);
+    transform: scale(0.15);
+    opacity: 1;
     color: rgb(241, 117, 218);
-    opacity: 0.1;
 }
 25% {
     transform: scale(0.25); 
-    color: rgb(197, 101, 219);
-    opacity: 0.4;
+    opacity: 1;
+    color: rgb(220, 108, 219);
 }
 50% {
     transform: scale(0.50);
-    color: rgb(177, 96, 220);
-    opacity: 0.8;
+    opacity: 1;
+    color: rgb(210, 105, 219);
 }
 70% {
-    transform: scale(0.70);
+    transform: scale(0.75);
+    opacity: 1;
+    color: rgb(197, 101, 220);
+}
+90% {
+    transform: scale(1);
     opacity: 1;
     color: rgb(170, 93, 220);
 }
