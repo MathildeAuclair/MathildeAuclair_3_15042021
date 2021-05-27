@@ -103,6 +103,9 @@ body {
 }
 .liste-fonctionnement:hover {
     background-color: rgb(246, 236, 255);
+    & .fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
+        color: $primary-color;
+    }
 }
 .numero {
     display: flex;
@@ -117,9 +120,6 @@ body {
 }
 .fa-mobile-alt, .fa-list-ul, .fa-store {
     @extend %couleur-icone;
-}
-.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
-    color: $primary-color;
 }
 ::marker {
     color: black;
@@ -140,8 +140,8 @@ section {
 .box {
     @extend %affichage-box;
 	background-color: #FFFFFF;
-    min-width: 300px;
-    display: block;
+    width: 95%;
+    display: inline-block;
     flex-wrap: wrap;
 	border-radius: 25px 25px 25px 25px;
 	margin-bottom: 25px;
@@ -156,7 +156,7 @@ section {
     border-radius: 25px 25px 0px 0px;
     min-width: 0;
 	min-height: 0;
-    display: flex;
+    display: inline-block;
     align-items: center;
 	overflow: hidden;
 	object-fit: cover;
@@ -599,7 +599,7 @@ html {
         }
     }
 } 
-@media screen and ( min-width: 600px) and ( max-width: 780px ) 
+@media screen and ( min-width: 600px) and ( max-width: 768px ) 
 {
 .bloc-menu {
     &:hover span {
@@ -612,8 +612,11 @@ html {
     margin-top: 30px;
 }
 } 
-@media screen and ( min-width: 768px ) and ( max-width: 1170px ) { 
-    
+@media screen and ( min-width: 768px ) and ( max-width: 1100px ) { 
+    body {
+        height: auto;
+        width: auto;
+    }
     #titre-fonctionnement, #resto {
         width: 100%;
         text-align: center;
@@ -621,14 +624,46 @@ html {
     #titre-fonctionnement {
         margin-bottom: -40px;
     }
-    .fas.fa-heart.coeur {
-        display: flex;
+    section {
+        display: inline-block;
         flex-wrap: wrap;
-        margin-left: 700px;
+        justify-content: flex-start;
+        height: 810px;
+        width: 100%;
     }
+    .box
+    {
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin-left: 50px;
+}
+.restaurant {
+    height: 180px;
+    width: 100%;
+    flex-basis: 100%;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+	min-height: 0;
+    display: flex;
+    align-items: center;
+	overflow: hidden;
+	object-fit: cover;
+}
+#placement {
+    position: relative;
+    margin-right: 130px;
+}
+#different {
+    position: absolute;
+}
+.ville {
+    width: 40%;
+}
     html {
         max-height: 1177px;
-        width: 100%;
+        max-width: 100%;
         display: flex;
         flex-wrap: wrap;
         margin-bottom: -20px;
@@ -647,8 +682,12 @@ html {
         margin-left: 90%;
         margin-top: -45px;
     }
+    .background {
+        height: 1683px;
+        max-width: 1100px;
+    }
 }
-@media screen and ( min-width: 1170px ) and ( max-width: 9990px ) { 
+@media screen and ( min-width: 1100px ) and ( max-width: 9990px ) { 
 
     body {
         width: auto;
@@ -678,14 +717,37 @@ html {
         height: 800px;
         width: 100%;
     }
-    .box {
-        display: inline-block;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 560px;
-        margin-left: 90px;
-    }
-    html {
+    .box
+    {
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin-left: 80px;
+}
+.restaurant {
+    height: 180px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+	min-height: 0;
+    display: flex;
+    align-items: center;
+	overflow: hidden;
+	object-fit: cover;
+}
+#placement {
+    position: absolute;
+    margin-left: 1020px;
+}
+#different {
+    position: absolute;
+    margin-left: 400px;
+}
+.ville {
+    width: 40%;
+}
+html {
         max-height: 1177px;
         max-width: auto;
         display: flex;
@@ -697,18 +759,23 @@ html {
     }
     #menu-restaurant {
         width: 100%;
+        flex-basis: 100%;
+        min-width: 0;
+        min-height: 0;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        object-fit: cover;
     }
     .far.fa-heart.menu {
         margin-right: 50px;
     }
-    #section-page {
-        width: 1100px;
-        display: flex;
-        flex-wrap: wrap;
+    #section-page, #section-page-enchantee {
+        width: 75%;
         margin-left: 150px;
     }
     .prix {
-        margin-left: 410px;
+        margin-left: 360px;
         margin-top: 30px;
     }
     .boite {
@@ -716,7 +783,7 @@ html {
         margin-top: -35px;
     }
     .background {
-        height: 1200px;
+        height: 1673px;
         max-width: 2500px;
     }
 }

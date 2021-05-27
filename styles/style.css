@@ -320,6 +320,10 @@ body {
   background-color: #f6ecff;
 }
 
+.liste-fonctionnement:hover .fa-mobile-alt:hover, .liste-fonctionnement:hover .fa-list-ul:hover, .liste-fonctionnement:hover .fa-store:hover {
+  color: #9356DC;
+}
+
 .numero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,10 +338,6 @@ body {
   margin-right: 40px;
   background: #9356DC;
   color: white;
-}
-
-.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
-  color: #9356DC;
 }
 
 ::marker {
@@ -364,8 +364,8 @@ section h2 {
 
 .box {
   background-color: #FFFFFF;
-  min-width: 300px;
-  display: block;
+  width: 95%;
+  display: inline-block;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   border-radius: 25px 25px 25px 25px;
@@ -384,9 +384,7 @@ section h2 {
   border-radius: 25px 25px 0px 0px;
   min-width: 0;
   min-height: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: inline-block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1077,7 +1075,7 @@ html {
   }
 }
 
-@media screen and (min-width: 600px) and (max-width: 780px) {
+@media screen and (min-width: 600px) and (max-width: 768px) {
   .bloc-menu:hover span {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
@@ -1089,7 +1087,11 @@ html {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1170px) {
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  body {
+    height: auto;
+    width: auto;
+  }
   #titre-fonctionnement, #resto {
     width: 100%;
     text-align: center;
@@ -1097,17 +1099,57 @@ html {
   #titre-fonctionnement {
     margin-bottom: -40px;
   }
-  .fas.fa-heart.coeur {
+  section {
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 810px;
+    width: 100%;
+  }
+  .box {
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    margin-left: 50px;
+  }
+  .restaurant {
+    height: 180px;
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+    min-height: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-left: 700px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #placement {
+    position: relative;
+    margin-right: 130px;
+  }
+  #different {
+    position: absolute;
+  }
+  .ville {
+    width: 40%;
   }
   html {
     max-height: 1177px;
-    width: 100%;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1129,9 +1171,13 @@ html {
     margin-left: 90%;
     margin-top: -45px;
   }
+  .background {
+    height: 1683px;
+    max-width: 1100px;
+  }
 }
 
-@media screen and (min-width: 1170px) and (max-width: 9990px) {
+@media screen and (min-width: 1100px) and (max-width: 9990px) {
   body {
     width: auto;
     height: auto;
@@ -1173,8 +1219,35 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 560px;
-    margin-left: 90px;
+    width: 40%;
+    margin-left: 80px;
+  }
+  .restaurant {
+    height: 180px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+    min-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  #placement {
+    position: absolute;
+    margin-left: 1020px;
+  }
+  #different {
+    position: absolute;
+    margin-left: 400px;
+  }
+  .ville {
+    width: 40%;
   }
   html {
     max-height: 1177px;
@@ -1191,21 +1264,29 @@ html {
   }
   #menu-restaurant {
     width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .far.fa-heart.menu {
     margin-right: 50px;
   }
-  #section-page {
-    width: 1100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  #section-page, #section-page-enchantee {
+    width: 75%;
     margin-left: 150px;
   }
   .prix {
-    margin-left: 410px;
+    margin-left: 360px;
     margin-top: 30px;
   }
   .boite {
@@ -1213,7 +1294,7 @@ html {
     margin-top: -35px;
   }
   .background {
-    height: 1200px;
+    height: 1673px;
     max-width: 2500px;
   }
 }
