@@ -76,7 +76,7 @@ body {
             li {
             display: inline-block;
             flex-wrap: wrap;
-            min-width: 310px;
+            min-width: 80%;
             list-style-type: none;
             align-items: center;
             height: 60px;
@@ -89,9 +89,10 @@ body {
                   text-decoration: none;
                   display: flex;
                   flex-wrap: wrap;
+                  text-align: center;
                   color: black;
-                  width: auto;
-                  margin-left: 80px;
+                  min-width: 70px;
+                  margin-left: 70px;
                   margin-top: 20px;
                   }
 }
@@ -140,7 +141,7 @@ section {
 .box {
     @extend %affichage-box;
 	background-color: #FFFFFF;
-    width: 95%;
+    width: 98%;
     display: inline-block;
     flex-wrap: wrap;
 	border-radius: 25px 25px 25px 25px;
@@ -196,7 +197,7 @@ section {
     display: flex;
     float: right;
     margin-top: -95px;
-    margin-left: 330px;
+    margin-left: 320px;
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -375,6 +376,8 @@ html {
          &:hover span {
              transform: translateX(-10px);
              width: 100px;
+             display: inline-flex;
+             flex-wrap: wrap;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
@@ -428,7 +431,7 @@ html {
         flex-wrap: wrap;
         float: right;
         margin-top: -42px;
-        margin-left: 87%;
+        margin-left: 85%;
         width: 30px;
         height: 30px;
         font-size: 24px;
@@ -580,25 +583,105 @@ html {
         z-index: 1;
     }
    }  
-@media screen and ( max-width: 600px) {
-    .prix {
-        margin-left: 120px;
-        margin-top: 40px;
+@media screen and (min-width: 259px) and ( max-width: 370px) {
+    body {
+        min-width: 259px;
+        height: auto;
     }
-    .boite {
-        margin-top: -60px;
+    html {
+        min-width: 259px;
+        height: auto;
+    }
+    #decouvrez {
+        margin-bottom: 20px;
+    }
+    .fonctionnement {
+        p {
+            font-size: 14px;
+            margin-top: -20px;
+            width: 140px;
+        }
     }
     .bloc-menu {
         &:hover span {
-                transform: translateX(-10px);
-                margin-top: -25px;
-                margin-left: 240px;
+            transform: translateX(-10px);
+            width: 30px;
+            display: inline-flex;
+            flex-wrap: wrap;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
         }
-        &:hover .boite {
-            margin-top: -40px;
-        }
+        &:hover .ligne-1 {
+           transform: translateX(0);
+           width: 80px;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
+       }
+       &:hover .ligne-2 {
+           transform: translateX(0);
+           width: 80px;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
+       }
+}
+.bloc-menu:hover:after{
+    width: 22%;
+  }
+    .prix {
+        margin-left: 60px;
+        margin-top: 40px;
+    }
+    .boite {
+        margin-top: -45px;
+    }
+    #nom-restaurant {
+        font-size: 20px;
+    }
+    .far.fa-heart.menu {
+        margin-right: 10px;
+    }
+    #placement {
+        margin-left: 240px;
+    }
+    #different {
+        margin-left: 240px;
+    }
+    .ville {
+        width: 40%;
+    }
+    footer {
+        min-width: 259px;
     }
 } 
+@media screen and ( min-width: 350px) and ( max-width: 600px ) 
+{
+    .prix {
+        margin-top: 40px;
+        margin-left: 120px;
+    }
+    .boite {
+        margin-top: -60px;
+        margin-left: 87%;
+    }
+.bloc-menu {
+    &:hover span {
+            transform: translateX(-10px);
+            margin-top: -25px;
+            margin-left: 230px;
+    }
+    &:hover .boite {
+        margin-top: -40px;
+    }
+}
+    .fonctionnement {
+        p {
+            margin-top: -1px;
+        }
+    }
+ }
 @media screen and ( min-width: 600px) and ( max-width: 768px ) 
 {
 .bloc-menu {
@@ -608,21 +691,26 @@ html {
             margin-left: 200px;
     }
 }
+.boite {
+    margin-left: 89%;
+}
 .prix {
     margin-top: 30px;
 }
+.fonctionnement {
+    p {
+        margin-top: -1px;
+    }
+}
 } 
-@media screen and ( min-width: 768px ) and ( max-width: 1100px ) { 
+@media screen and ( min-width: 768px ) and ( max-width: 1050px ) { 
     body {
         height: auto;
-        width: auto;
+        max-width: 1100px;
     }
     #titre-fonctionnement, #resto {
-        width: 100%;
+        width: 98%;
         text-align: center;
-    }
-    #titre-fonctionnement {
-        margin-bottom: -40px;
     }
     section {
         display: inline-block;
@@ -639,6 +727,14 @@ html {
     width: 40%;
     margin-left: 50px;
 }
+.numero {
+    margin-right: 180px;
+}
+.fonctionnement {
+    p {
+        margin-top: -1px;
+    }
+}
 .restaurant {
     height: 180px;
     width: 100%;
@@ -651,9 +747,13 @@ html {
 	overflow: hidden;
 	object-fit: cover;
 }
+.fas.fa-heart.coeur {
+    display: flex;
+    flex-wrap: wrap;
+}
 #placement {
-    position: relative;
-    margin-right: 130px;
+    position: absolute;
+    margin-left: 695px;
 }
 #different {
     position: absolute;
@@ -683,27 +783,34 @@ html {
         margin-top: -45px;
     }
     .background {
-        height: 1683px;
+        height: 1713px;
         max-width: 1100px;
     }
 }
-@media screen and ( min-width: 1100px ) and ( max-width: 9990px ) { 
+@media screen and ( min-width: 1050px ) and ( max-width: 9990px ) { 
 
     body {
         width: auto;
         height: auto;
     }
-    .logo, .presentation {
-        width: 100%;
+    .logo, .presentation, .localisation {
+        width: 99.8%;
         text-align: center;
     }
     #titre-fonctionnement {
-        width: 100%;
-        margin-bottom: -70px;
+        width: 98%;
         text-align: center;
     }
+    .numero {
+        margin-right: 450px;
+    }
+    .fonctionnement {
+        p {
+            margin-top: -1px;
+        }
+    }
     #resto {
-        width: 100%;
+        width: 98%;
         text-align: center;
     }
     .fas.fa-heart.coeur {
@@ -738,7 +845,7 @@ html {
 }
 #placement {
     position: absolute;
-    margin-left: 1020px;
+    margin-left: 960px;
 }
 #different {
     position: absolute;
@@ -775,7 +882,7 @@ html {
         margin-left: 150px;
     }
     .prix {
-        margin-left: 360px;
+        margin-left: 300px;
         margin-top: 30px;
     }
     .boite {
