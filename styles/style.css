@@ -517,7 +517,7 @@ footer a {
 /* CSS des 4 Menus */
 html {
   max-height: 1177px;
-  max-width: auto;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,10 +1124,10 @@ html {
   .far.fa-heart.menu {
     margin-right: 10px;
   }
-  #placement {
+  #placement, #placement-1 {
     margin-left: 240px;
   }
-  #different {
+  #different, #different-1 {
     margin-left: 240px;
   }
   .ville {
@@ -1239,11 +1239,11 @@ html {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #placement {
+  #placement, #placement-1 {
     position: absolute;
     margin-left: 695px;
   }
-  #different {
+  #different, #different-1 {
     position: absolute;
   }
   .ville {
@@ -1345,11 +1345,11 @@ html {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #placement {
+  #placement, #placement-1 {
     position: absolute;
     margin-left: 960px;
   }
-  #different {
+  #different, #different-1 {
     position: absolute;
     margin-left: 400px;
   }
@@ -1358,7 +1358,7 @@ html {
   }
   html {
     max-height: 1177px;
-    max-width: auto;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1401,7 +1401,7 @@ html {
     margin-top: -35px;
   }
   .background {
-    height: 1673px;
+    height: 1733px;
     max-width: 2500px;
   }
 }
