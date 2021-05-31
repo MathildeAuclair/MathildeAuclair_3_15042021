@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <title>Ohmyfood</title>
-    <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>Ohmyfood</title>
+     <link href="vendor/fontawesome/css/all.css" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles/style.css">
   </head>
+
   <body>
-    <div class="loader"></div><div class="background"></div>
+      <div class="loader"></div><div class="background"></div>
     <header>
-    <h1 class="logo">ohmyfood</h1>
+      <h1 class="logo">ohmyfood</h1>
     </header>
 
 <div class="localisation"><h2><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h2></div>
@@ -23,14 +25,14 @@
          <input class="btn" type="submit" value="Explorer nos restaurants">
        </form>
 
-       <div class="fonctionnement">
-        <p class="titre-fonctionnement"><strong>Fonctionnement</strong></p>
-        <ol>
-        <li class="liste-fonctionnement"><a href="#"><span class="numero">1</span><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</a></li>
-        <li class="liste-fonctionnement"><a href="#"><span class="numero">2</span><i class="fas fa-list-ul"></i>Composez votre menu</a></li>
-        <li class="liste-fonctionnement"><a href="#"><span class="numero">3</span><i class="fas fa-store"></i>Dégustez au restaurant</a></li>
-      </ol>
-    </div>
+        <h2 id="titre-fonctionnement">Fonctionnement</h2>
+           <div class="fonctionnement">
+             <ol>
+                 <li class="liste-fonctionnement"><a href="#"><span class="numero">1</span><i class="fas fa-mobile-alt"></i><p>Choisissez un restaurant</p></a></li>
+                 <li class="liste-fonctionnement"><a href="#"><span class="numero">2</span><i class="fas fa-list-ul"></i><p>Composez votre menu</p></a></li>
+                 <li class="liste-fonctionnement"><a href="#"><span class="numero">3</span><i class="fas fa-store"></i><p>Dégustez au restaurant</p></a></li>
+            </ol>
+          </div>
 
      </nav>
 
@@ -38,27 +40,27 @@
         <h2 id="resto">Restaurants</h2>
 
         <div class="box"><a href="la_palette_du_gout.html"><img src="medias/images/restaurants/la_palette_du_gout.jpg" alt="restaurant1" class="restaurant"/><div class="nouveau"><p class="texte-nouveau">Nouveau</p></div><h3 class="titre-box">La palette du goût</h3><p class="ville">Ménilmontant</p></a></div>
-        <button class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
+        <button id="placement" class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
 
         <div class="box"><a href="la_note_enchantee.html"><img src="medias/images/restaurants/la_note_enchantee.jpg" alt="restaurant2" class="restaurant"/><div class="nouveau"><p class="texte-nouveau">Nouveau</p></div><h3 class="titre-box">La note enchantée</h3><p class="ville">Charonne</p></a></div>
-        <button class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
+        <button id="different-1" class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
 
         <div class="box"><a href="a_la_francaise.html"><img src="medias/images/restaurants/a_la_francaise.jpg" alt="restaurant3" class="restaurant"/><h3 class="titre-box">A la française</h3><p class="ville">Cité Rouge</p></a></div>
-        <button class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
+        <button id="placement-1" class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
         
         <div class="box"><a href="le_delice_des_sens.html"><img src="medias/images/restaurants/le_delice_des_sens.jpg" alt="restaurant4" class="restaurant"/><h3 class="titre-box">Le délice des sens</h3><p class="ville">Folie-Méricourt</p></a></div>
-        <button class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
+        <button id="different" class="fas fa-heart coeur"><i class="far fa-heart kokoro"></i></button>
 
       </section>
 
     <footer>
             <div><a href="#" class="titre-footer">Ohmyfood</a></div>
-            <ul class="lien-footer">
-            <li class="texte-footer"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
-            <li class="texte-footer"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
-            <li class="texte-footer"><a href="#">Mentions légales</a></li>
-            <li class="texte-footer"><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
-          </ul>
+              <ul class="lien-footer">
+               <li class="texte-footer"><a href="#"><i class="fas fa-utensils"></i>Proposer un restaurant</a></li>
+               <li class="texte-footer"><a href="#"><i class="fas fa-hands-helping"></i>Devenir partenaire</a></li>
+               <li class="texte-footer"><a href="#">Mentions légales</a></li>
+               <li class="texte-footer"><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+             </ul>
     </footer>
   </body>
 </html>
