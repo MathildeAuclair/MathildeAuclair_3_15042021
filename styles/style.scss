@@ -5,14 +5,15 @@
 
 
 /* CSS Accueil version mobile */ 
+
 .logo {
     @include logo;
 }
 body {
     font-family: 'Roboto', sans-serif;
-    width: 370px;
+    min-width: 320px;
     margin-left: -0px;
-    max-height: 2300px;
+    max-height: 2245px;
 }
 ::before {
     margin-right: 20px;
@@ -20,6 +21,7 @@ body {
 .localisation {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     height: 45px;
     font-size: 10px;
     background-color: rgb(234,234,234);
@@ -28,56 +30,83 @@ body {
     @include btn;
 }
 .presentation {
-    height: 300px;
+    height: 250px;
     background-color: rgb(246, 246, 246);
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 #reservez {
     font-size: 24px;
     display: flex;
     text-align: center;
-    margin-top: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    margin-bottom: 45px;
+    margin-top: 15px;
 }
 #decouvrez {
     font-family: 'Roboto', sans-serif; font-weight: 100;
     font-size: 18px;
     display: flex;
     text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: -20px;
     margin-bottom: 40px;
-}
-.titre-fonctionnement {
-    margin-bottom: 25px;
+    width: auto;
 }
 .fonctionnement {
-    height: 320px;
-    margin-top: 50px;
-    margin-left: 10px;
+    height: 280px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 
-        strong {
-        font-size: 24px;
-        }
             li {
+            display: inline-block;
+            flex-wrap: wrap;
+            min-width: 80%;
             list-style-type: none;
-            display: flex;
-            align-content: flex-start;
+            align-items: center;
             height: 60px;
-            width: 340px;
             border-radius: 20px 20px 20px 20px;
             background-color: rgb(246, 246, 246);
             margin-bottom: 20px;
-            margin-left: -35px;
+            margin-right: 20px;
              }
                   a {
                   text-decoration: none;
                   display: flex;
+                  flex-wrap: wrap;
+                  text-align: center;
                   color: black;
-                  width: 280px;
-                  margin-left: 80px;
-                  margin-top: 19px;
+                  min-width: 70px;
+                  margin-left: 70px;
+                  margin-top: 20px;
                   }
+}
+#titre-fonctionnement {
+        font-size: 24px;
+        margin-left: 15px;
+        margin-top: 40px;
+        margin-bottom: -10px;
 }
 .liste-fonctionnement:hover {
     background-color: rgb(246, 236, 255);
+    & .fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
+        color: $primary-color;
+    }
 }
 .numero {
     display: flex;
@@ -93,38 +122,43 @@ body {
 .fa-mobile-alt, .fa-list-ul, .fa-store {
     @extend %couleur-icone;
 }
-.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
-    color: $primary-color;
-}
 ::marker {
     color: black;
 }
 section {
     height: 1350px;
-    width: 370px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
     background-color: rgb(246,246,246);
     h2 {
         margin-top: 50px;
         margin-bottom: 35px;
-        margin-left: 10px;
+        margin-left: 15px;
         display: inline-block;
     }
 }
 .box {
     @extend %affichage-box;
 	background-color: #FFFFFF;
-    width: 350px;
+    width: 98%;
+    display: inline-block;
+    flex-wrap: wrap;
 	border-radius: 25px 25px 25px 25px;
 	margin-bottom: 25px;
-    margin-left: 10px;
+    height: 280px;
+    margin-left: 5px;
 	box-shadow: 3px 3px 3px rgb(235,235,235);
 }
 .restaurant {
     height: 180px;
-    width: 350px;
+    width: 100%;
+    flex-basis: 100%;
     border-radius: 25px 25px 0px 0px;
     min-width: 0;
 	min-height: 0;
+    display: inline-block;
+    align-items: center;
 	overflow: hidden;
 	object-fit: cover;
 }
@@ -132,24 +166,28 @@ section {
     height: 30px;
     width: 72px;
     background-color: $third-color;
-    position: absolute;
+    display: flex;
+    position: sticky;
+    float: right;
     color: green;
-    text-align: center;
-    margin-left: 265px;
-    margin-top: -170px;
+    margin-top: -160px;
+    margin-right: 30px;
 }
 .texte-nouveau {
         margin-top: 5px;
+        margin-left: 5px;
 }
 .titre-box { 
     @extend %affichage-box;
-    margin-right: 150px;
-    margin-left: 10px;
+    margin-right: 30px;
+    margin-left: 5px;
     margin-bottom: -30px;
    }
 .ville {
     @extend %affichage-box;
-    margin-left: 10px;
+    margin-right: 200px;
+    margin-left: 5px;
+    width: 110px;
     font-family: 'Roboto',sans-serif; font-weight: 100;
 }
 .fa-heart {
@@ -158,7 +196,8 @@ section {
 .coeur {
     display: flex;
     float: right;
-    margin-top: -68px;
+    margin-top: -95px;
+    margin-left: 320px;
     height: 40px;
     width: 40px;
     cursor: pointer;
@@ -169,7 +208,7 @@ section {
 }
 .coeur::before {
     font-weight: bold;
-    color: white;
+    color: transparent;
     z-index: 5;
     font-size: 27px;
     transform-origin: bottom;
@@ -196,7 +235,7 @@ section {
     color: black;
 }
 .kokoro:hover::before {
-    color: violet;
+    color: rgb(210, 105, 219);
     z-index: 2;
 }
 footer {
@@ -205,9 +244,15 @@ footer {
 .titre-footer {
     @include titre-footer;
 }
+
 /* CSS des 4 Menus */
+
 html {
-    height: 1200px;
+    max-height: 1177px;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -20px;
 }
 #fleche {
     color: black;
@@ -225,23 +270,45 @@ html {
 }
 #menu-restaurant {
     height: 300px;
-    width: 370px;
+    width: 100%;
+    flex-basis: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    object-fit: cover;
+    display: flex;
+    flex-wrap: wrap;
 }
 #section-page {
     @include marges-page;
-    height: 1260px;
-    width: 370px;
+    height: auto;
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 #nom-restaurant {
     font-family: 'Shrikhand', sans-serif;
     font-size: 25px;
-    margin-left: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 25px;
 }
 .menu-coeur {
     height: 40px;
     width: 40px;
+    display: flex;
     float: right;
     z-index: 1;
+}
+.far.fa-heart.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 55px;
+    margin-right: 20px;
 }
 .fa-heart.menu {
     display: flex;
@@ -251,14 +318,13 @@ html {
     cursor: pointer;
     color: black;
     margin-top: 78px;
-    margin-right: 20px;
     border: none;
     background-color: transparent;
     outline: 0;
 }
 .fa-heart.menu::before {
     font-weight: bold;
-    color: white;
+    color: transparent;
     z-index: 5;
     font-size: 26px;
     transform-origin: bottom;
@@ -283,7 +349,7 @@ html {
     color: black;
 }
 .kokoro-menu:hover::before {
-    color: violet;
+    color: rgb(210, 105, 219);
     z-index: 2;
 }
 .titre-majuscule {
@@ -294,18 +360,52 @@ html {
     padding-bottom: 0.3em;
 }
 .bloc-menu {
-    display: inline-block;
-    width: 340px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 95%;
     height: 80px;
     font-size: 18px;
     border-radius: 25px 25px 25px 25px;
     background-color: #FFF;
     font-family: sans-serif;
     position: relative;
+    transform-origin: left;
     cursor: pointer;
     margin-bottom: 10px;
     z-index: 0;
-  }
+         &:hover span {
+             transform: translateX(-10px);
+             width: 100px;
+             display: inline-flex;
+             flex-wrap: wrap;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+         }
+         &:hover .ligne-1 {
+            transform: translateX(0);
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &:hover .ligne-2 {
+            transform: translateX(0);
+            width: 200px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+}
+.prix {
+    transform: translateX(-10%);
+    transition: transform 330ms ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    margin-left: 240px;
+    margin-top: -20px; 
+}
 .bloc-menu:after {
     position: absolute;
     content: "";
@@ -322,23 +422,27 @@ html {
     z-index: 0;
   }
 .bloc-menu:hover:after{
-    width: 15%;
+    width: 18%;
     opacity: 1;
     z-index: 0;
   }
 .boite {
-        display: block;
-        margin-left: 305px;
-        margin-top: -82px;
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
+        margin-top: -42px;
+        margin-left: 85%;
         width: 30px;
         height: 30px;
-        font-size: 18px;
+        font-size: 24px;
         background-color: white;
         display: none;
   }
 .bloc-menu:hover .boite {
-        position: absolute;
-        display: block;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        float: right;
         opacity: 1;
         z-index: 10;
         background-color: $third-color;
@@ -361,6 +465,7 @@ html {
    } 
 .entrees {
     @include menu;
+    margin-top: 85px;
 }
 .plats {
     @include menu;
@@ -373,27 +478,25 @@ html {
 .ligne-1 {
     font-size: 16px;
     margin-left: 5px;
-    max-width: 240px;
-}
+    width: 50%;
+    opacity: 1;
+ }
 .ligne-2 {
     font-family: 'Roboto', sans-serif; font-weight: 100;
-    max-width: 240px;
+    width: 50%;
     font-size: 14px;
-    margin-left: 5px;
-    margin-top: -10px;
+    margin-top: 40px;
     opacity: 1;
-}
-.prix {
-     margin-top: -32px;
-     height: 60px;
-     width: 20px;
-     font-size: 16px;
-     margin-left: 260px;
-     font-family: 'Roboto', sans-serif;
+    margin-left: 5px;
+    position: absolute;
 }
 .btn-menu, .btn-menu-enchantee {
     @extend .btn;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 30px;
+    margin-left: 10px;
 }
 .titre-footer {
     font-family: 'Shrikhand';
@@ -402,9 +505,16 @@ html {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 48%;
 }
-#menu.exception, #section-page-enchantee {
+#section-page-enchantee {
     @include marges-page;
+    height: auto;
+    display: flex;
+    width: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
 .loader {
   position: absolute;
@@ -444,13 +554,13 @@ html {
         z-index: 3;
     }
    } 
- .background {
+   .background {
     background-size: cover;
     background-color: whitesmoke;
     z-index: -9999;
     opacity: 0;
-    height: 2345px;
-    width: 370px;
+    width: 100%;
+    height: 2283px;
     position: absolute;
     animation-name: fond, apress;
     animation-duration: 2s, 2s;
@@ -473,444 +583,314 @@ html {
         z-index: 1;
     }
    }  
-/* Paramétrage Tablette */
-
-@media only screen and (min-width: 600px) and (max-width: 720px) {
-
-    .logo, #logo-menu {
-        margin-left: 110px;
-        width: 550px;
-        text-align: center;
+@media screen and (min-width: 259px) and ( max-width: 370px) {
+    body {
+        min-width: 259px;
+        height: auto;
     }
-    .localisation {
-        width: 754px;
-    }
-    .presentation {
-        width: 824px;
-        text-align: center;
-        height: 250px;
+    html {
+        min-width: 259px;
+        height: auto;
     }
     #decouvrez {
-        margin-left: 130px;
-        margin-top: 40px;
-    }
-    #reservez {
-        margin-left: 210px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .btn {
-        margin-left: -30px;
-    }
-    .titre-fonctionnement {
-        margin-left: 80px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .fonctionnement {
-      width: 450px;
-      margin-left: 220px;
+        p {
+            font-size: 14px;
+            margin-top: -20px;
+            width: 140px;
+        }
     }
-    section {
-        width: 620px;
-        height: 1450px;
-        margin-left: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .bloc-menu {
+        &:hover span {
+            transform: translateX(-10px);
+            width: 30px;
+            display: inline-flex;
+            flex-wrap: wrap;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
+        }
+        &:hover .ligne-1 {
+           transform: translateX(0);
+           width: 80px;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
+       }
+       &:hover .ligne-2 {
+           transform: translateX(0);
+           width: 80px;
+           text-overflow: ellipsis;
+           white-space: nowrap;
+           overflow: hidden;
+       }
+}
+.bloc-menu:hover:after{
+    width: 22%;
+  }
+    .prix {
+        margin-left: 60px;
+        margin-top: 40px;
     }
-    .box {
-        margin-bottom: 70px;
-        margin-left: 40px;
-        width: 540px;
-        height: 280px;
-    }
-    .restaurant {
-        width: 540px;
-    }
-    #resto {
-        text-align: center;
-        margin-right: -30px;
-    }
-    .ville {
-        margin-top: 35px;
-        margin-left: -100px;
-    }
-    .nouveau {
-        margin-left: 450px;
-    }
-    i.kokoro {
-        margin-top: -57px;
-        margin-left: 523px;
-    }
-    .coeur::before {
-        margin-top: -77px;
-        margin-left: 492px;
-    }
-    footer {
-        width: 724px;
-        height: 130px;
-        display: flex;
-    }
-    .titre-footer {
-        margin-right: 10px;
-    }
-    .lien-footer {
-        max-width: 1000px;
-        display: flex;
-        align-content: flex-start;
-    }
-    footer.li {
-        width: 1000px;
-        margin-right: 180px;
-    }
-    .texte-footer {
-        margin-right: 70px;
-        margin-top: 6px;
-    }
-    .background {
-        width: 1024px;
-        height: 2335px;
-    }
-    /* CSS Pages tablettes */
-    
-    #fleche {
-        margin-top: 30px;
-    }
-    #menu-restaurant {
-        width: 720px;
-        min-width: 0;
-	    min-height: 0;
-	    overflow: hidden;
-	    object-fit: cover;
-    }
-    #section-page {
-        width: 600px;
-        height: 1200px;
-    }
-    #section-page-enchantee {
-        width: 600px;
-        height: 1300px;
-    }
-    .fa-heart.menu {
-        display: flex;
-        float: right;
-        margin-left: 500px;
+    .boite {
         margin-top: -45px;
     }
-    .kokoro-menu {
-        margin-left: -13px;
-    }
     #nom-restaurant {
-        margin-left: 60px;
-        margin-top: 35px;
-        font-size: 30px;
+        font-size: 20px;
     }
-    .entrees {
-        margin-left: 60px;
-        margin-top: 5px;
+    .far.fa-heart.menu {
+        margin-right: 10px;
     }
-    .plats, .desserts {
-        margin-left: 60px;
-        margin-top: -10px;
+    #placement, #placement-1 {
+        margin-left: 240px;
     }
-    .btn-menu, .btn-menu-enchantee {
-        margin-left: 220px;
-        margin-bottom: 50px;
+    #different, #different-1 {
+        margin-left: 240px;
     }
+    .ville {
+        width: 40%;
     }
-@media only screen and (min-width: 720px) and (max-width: 1024px) {
-
-.logo, #logo-menu {
-    margin-left: 120px;
-    width: 800px;
-    text-align: center;
+    footer {
+        min-width: 259px;
+    }
+} 
+@media screen and ( min-width: 350px) and ( max-width: 600px ) 
+{
+    .prix {
+        margin-top: 40px;
+        margin-left: 120px;
+    }
+    .boite {
+        margin-top: -60px;
+        margin-left: 87%;
+    }
+.bloc-menu {
+    &:hover span {
+            transform: translateX(-10px);
+            margin-top: -25px;
+            margin-left: 230px;
+    }
+    &:hover .boite {
+        margin-top: -40px;
+    }
 }
-.localisation {
-    width: 1024px;
-    display: flex;
-    flex-wrap: wrap;
+    .fonctionnement {
+        p {
+            margin-top: -1px;
+        }
+    }
+ }
+@media screen and ( min-width: 600px) and ( max-width: 768px ) 
+{
+.bloc-menu {
+    &:hover span {
+            transform: translateX(-10px);
+            margin-top: 35px;
+            margin-left: 200px;
+    }
 }
-.presentation {
-    width: 1024px;
-    text-align: center;
-    height: 250px;
+.boite {
+    margin-left: 89%;
 }
-#decouvrez {
-    margin-left: 280px;
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-}
-#reservez {
-    margin-left: 340px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-.btn {
-    margin-left: 30px;
-}
-.titre-fonctionnement {
-    margin-left: 80px;
-    margin-bottom: 30px;
-}
-.fonctionnement {
-  width: 450px;
-  margin-left: 345px;
-}
-section {
-    width: 800px;
-    height: 1450px;
-    margin-left: 100px;
-    display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.box {
-    margin-bottom: 70px;
-    margin-left: 80px;
-    width: 650px;
-    height: 290px;
-}
-.restaurant {
-    width: 650px;
-}
-#resto {
-    text-align: center;
-}
-.ville {
-    margin-top: 35px;
-    margin-left: -100px;
-}
-.nouveau {
-    margin-left: 530px;
-}
-i.kokoro {
-    margin-left: 684px;
-    margin-top: -63px;
-}
-.coeur::before {
-    margin-top: -82px;
-    margin-left: 653px;
-}
-footer {
-    width: 1024px;
-    height: 130px;
-    display: flex;
-    align-content: flex-start;
-}
-.titre-footer {
-    margin-right: 40px;
-}
-.lien-footer {
-    max-width: 1000px;
-    display: flex;
-    align-content: flex-start;
-}
-footer.li {
-    width: 1000px;
-    margin-right: 180px;
-}
-.texte-footer {
-    margin-right: 70px;
-    margin-top: 6px;
-}
-.background {
-    width: 1024px;
-    height: 2335px;
-}
-/* CSS Pages tablettes */
-html {
-    height: 1200px;
-    width: 1024px;
-}
-#fleche {
+.prix {
     margin-top: 30px;
 }
-#menu-restaurant {
-    width: 1024px;
+.fonctionnement {
+    p {
+        margin-top: -1px;
+    }
+}
+} 
+@media screen and ( min-width: 768px ) and ( max-width: 1050px ) { 
+    body {
+        height: auto;
+        max-width: 1100px;
+    }
+    #titre-fonctionnement, #resto {
+        width: 98%;
+        text-align: center;
+    }
+    section {
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 810px;
+        width: 100%;
+    }
+    .box
+    {
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin-left: 50px;
+}
+.numero {
+    margin-right: 180px;
+}
+.fonctionnement {
+    p {
+        margin-top: -1px;
+    }
+}
+.restaurant {
+    height: 180px;
+    width: 100%;
+    flex-basis: 100%;
+    border-radius: 25px 25px 0px 0px;
     min-width: 0;
 	min-height: 0;
+    display: flex;
+    align-items: center;
 	overflow: hidden;
 	object-fit: cover;
 }
-#section-page, #section-page-enchantee {
-    width: 800px;
-    height: 950px;
-    margin-left: 120px;
-}
-.fa-heart.menu {
+.fas.fa-heart.coeur {
     display: flex;
-    float: right;
-    margin-left: 690px;
-    margin-top: -51px;
+    flex-wrap: wrap;
 }
-.kokoro-menu {
-    margin-left: -13px;
+#placement, #placement-1  {
+    position: absolute;
+    margin-left: 695px;
 }
-#nom-restaurant {
-    margin-left: 60px;
-    font-size: 30px;
+#different, #different-1 {
+    position: absolute;
 }
-.entrees, .plats, .desserts {
-    margin-left: 60px;
-    margin-top: -10px;
+.ville {
+    width: 40%;
 }
-.btn-menu, .btn-menu-enchantee {
-    margin-left: 300px;
-    margin-bottom: 50px;
-}
-}
-/* Paramétrage Desktop */
-
-@media only screen and (min-width: 1024px) and (max-width: 9999px) {
-
-    .logo {
-        margin-left: 100px;
-        width: 1200px;
-        text-align: center;
-        flex-wrap: wrap;
-    }
-    #logo-menu { 
-        width: 1440px;
-        text-align: center;
-    }
-    .localisation {
-        width: 1440px;
-        h2 {
-            margin-left: -60px;
-        }
-    }
-    input.btn {
-        margin-left: -30px;
-    }
-    .presentation {
-        width: 1440px;
-        text-align: center;
-        height: 250px;
-    }
-    #decouvrez {
-        margin-left: 450px;
-        margin-top: 40px;
-    }
-    #reservez {
-        margin-left: 510px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    .btn {
-        margin-left: 30px;
-    }
-    .titre-fonctionnement {
-        margin-left: 80px;
-        margin-bottom: 30px;
-    }
-    .fonctionnement {
-      width: 450px;
-      margin-left: 550px;
-    }
-    section {
-        width: 1100px;
-        height: 1430px;
-        margin-left: 170px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .box {
-        margin-bottom: 70px;
-        margin-left: 125px;
-        width: 850px;
-        height: 290px;
-    }
-    .restaurant {
-        width: 850px;
-    }
-    #resto {
-        text-align: center;
-    }
-    .ville {
-        margin-top: 35px;
-        margin-left: -100px;
-    }
-    .nouveau {
-        margin-left: 740px;
-    }
-    .fa-heart.coeur {
-        margin-left: 880px;
-    }
-    .fa-heart.coeur::before {
-        margin-top: -83px;
-    }
-    .fa-heart.kokoro {
-        margin-top: -64px;
-        margin-right: 1.5px;
-    }
-    footer {
-        width: 1440px;
-        height: 130px;
-        display: flex;
-        align-content: flex-start;
-    }
-    .titre-footer {
-        margin-right: 40px;
-    }
-    .lien-footer {
-        max-width: 1000px;
-        display: flex;
-        align-content: flex-start;
-    }
-    .texte-footer {
-        margin-right: 120px;
-        margin-top: 6px;
-    }
-    .background {
-        width: 1440px;
-        height: 2314px;
-    }
-    /* CSS Pages tablettes */
     html {
-        height: 1200px;
-        width: 1440px;
+        max-height: 1177px;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -20px;
     }
-    #fleche {
+    #nom-restaurant, .entrees, .plats, .desserts {
+        margin-left: 50px;
+    }
+    .far.fa-heart.menu {
+        margin-right: 50px;
+    }
+    .prix {
+        margin-left: 280px;
         margin-top: 30px;
     }
+    .boite {
+        margin-left: 90%;
+        margin-top: -45px;
+    }
+    .background {
+        height: 1713px;
+        max-width: 1100px;
+    }
+}
+@media screen and ( min-width: 1050px ) and ( max-width: 9990px ) { 
+
+    body {
+        width: auto;
+        height: auto;
+    }
+    .logo, .presentation, .localisation {
+        width: 99.8%;
+        text-align: center;
+    }
+    #titre-fonctionnement {
+        width: 98%;
+        text-align: center;
+    }
+    .numero {
+        margin-right: 450px;
+    }
+    .fonctionnement {
+        p {
+            margin-top: -1px;
+        }
+    }
+    #resto {
+        width: 98%;
+        text-align: center;
+    }
+    .fas.fa-heart.coeur {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    section {
+        display: inline-block;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 800px;
+        width: 100%;
+    }
+    .box
+    {
+    display: inline-block;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 40%;
+    margin-left: 80px;
+}
+.restaurant {
+    height: 180px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    min-width: 0;
+	min-height: 0;
+    display: flex;
+    align-items: center;
+	overflow: hidden;
+	object-fit: cover;
+}
+#placement, #placement-1 {
+    position: absolute;
+    margin-left: 960px;
+}
+#different, #different-1 {
+    position: absolute;
+    margin-left: 400px;
+}
+.ville {
+    width: 40%;
+}
+html {
+        max-height: 1177px;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -20px;
+    }
+    #nom-restaurant, .entrees, .plats, .desserts {
+        margin-left: 50px;
+    }
     #menu-restaurant {
-        width: 1440px;
+        width: 100%;
+        flex-basis: 100%;
         min-width: 0;
         min-height: 0;
+        display: flex;
+        align-items: center;
         overflow: hidden;
         object-fit: cover;
     }
-    #section-page {
-        width: 1000px;
-        height: 950px;
-        margin-left: 220px;
+    .far.fa-heart.menu {
+        margin-right: 50px;
     }
-    #section-page-enchantee {
-        width: 1000px;
-        height: 950px;
-        margin-left: 260px;
+    #section-page, #section-page-enchantee {
+        width: 75%;
+        margin-left: 150px;
     }
-    .fa-heart.menu {
-        display: flex;
-        float: right;
-        margin-left: 800px;
-        margin-top: -52px;
+    .prix {
+        margin-left: 300px;
+        margin-top: 30px;
     }
-    .kokoro-menu {
-        margin-left: -13px;
+    .boite {
+        margin-left: 90%;
+        margin-top: -35px;
     }
-    #nom-restaurant {
-        margin-left: 145px;
-        font-size: 30px;
+    .background {
+        height: 1733px;
+        max-width: 2500px;
     }
-    .entrees, .plats, .desserts {
-        margin-left: 145px;
-        margin-top: -10px;
-    }
-    input.btn-menu, input.btn-menu-enchantee {
-        margin-left: 400px;
-        margin-bottom: 50px;
-    }
-    }
+}

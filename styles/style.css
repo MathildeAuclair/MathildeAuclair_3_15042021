@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @-webkit-keyframes fadein {
   0% {
     opacity: 0;
@@ -16,6 +15,7 @@
             transform: translateY(0);
   }
 }
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -41,26 +41,32 @@
     opacity: 0;
   }
   10% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    -webkit-transform: scale(0.15);
+            transform: scale(0.15);
+    opacity: 1;
     color: #f175da;
-    opacity: 0.1;
   }
   25% {
     -webkit-transform: scale(0.25);
             transform: scale(0.25);
-    color: #c565db;
-    opacity: 0.4;
+    opacity: 1;
+    color: #dc6cdb;
   }
   50% {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
-    color: #b160dc;
-    opacity: 0.8;
+    opacity: 1;
+    color: #d269db;
   }
   70% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    opacity: 1;
+    color: #c565dc;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
     color: #aa5ddc;
   }
@@ -73,26 +79,32 @@
     opacity: 0;
   }
   10% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    -webkit-transform: scale(0.15);
+            transform: scale(0.15);
+    opacity: 1;
     color: #f175da;
-    opacity: 0.1;
   }
   25% {
     -webkit-transform: scale(0.25);
             transform: scale(0.25);
-    color: #c565db;
-    opacity: 0.4;
+    opacity: 1;
+    color: #dc6cdb;
   }
   50% {
     -webkit-transform: scale(0.5);
             transform: scale(0.5);
-    color: #b160dc;
-    opacity: 0.8;
+    opacity: 1;
+    color: #d269db;
   }
   70% {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    opacity: 1;
+    color: #c565dc;
+  }
+  90% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
     opacity: 1;
     color: #aa5ddc;
   }
@@ -130,18 +142,25 @@
 .logo {
   font-size: 30px;
   height: 50px;
-  width: 180px;
+  min-width: 180px;
   border-bottom: black;
   font-family: 'Shrikhand';
-  display: inline-block;
-  margin-left: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 10px;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  width: 370px;
+  min-width: 320px;
   margin-left: -0px;
-  max-height: 2300px;
+  max-height: 2245px;
 }
 
 ::before {
@@ -155,6 +174,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 45px;
   font-size: 10px;
   background-color: #eaeaea;
@@ -169,7 +190,8 @@ body {
   border-radius: 30px 30px 30px 30px;
   border: 2px white solid;
   border-color: #f6f6f6;
-  margin-left: 90px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .btn.btn:hover, .btn-menu:hover, .btn-menu-enchantee:hover {
@@ -180,9 +202,25 @@ body {
 }
 
 .presentation {
-  height: 300px;
+  height: 250px;
   background-color: #f6f6f6;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #reservez {
@@ -191,7 +229,14 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  margin-top: 35px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  margin-bottom: 45px;
+  margin-top: 15px;
 }
 
 #decouvrez {
@@ -202,36 +247,53 @@ body {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: -20px;
   margin-bottom: 40px;
-}
-
-.titre-fonctionnement {
-  margin-bottom: 25px;
+  width: auto;
 }
 
 .fonctionnement {
-  height: 320px;
-  margin-top: 50px;
-  margin-left: 10px;
-}
-
-.fonctionnement strong {
-  font-size: 24px;
-}
-
-.fonctionnement li {
-  list-style-type: none;
+  height: 280px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fonctionnement li {
+  display: inline-block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-width: 80%;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 60px;
-  width: 340px;
   border-radius: 20px 20px 20px 20px;
   background-color: #f6f6f6;
   margin-bottom: 20px;
-  margin-left: -35px;
+  margin-right: 20px;
 }
 
 .fonctionnement a {
@@ -239,14 +301,28 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
   color: black;
-  width: 280px;
-  margin-left: 80px;
-  margin-top: 19px;
+  min-width: 70px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+#titre-fonctionnement {
+  font-size: 24px;
+  margin-left: 15px;
+  margin-top: 40px;
+  margin-bottom: -10px;
 }
 
 .liste-fonctionnement:hover {
   background-color: #f6ecff;
+}
+
+.liste-fonctionnement:hover .fa-mobile-alt:hover, .liste-fonctionnement:hover .fa-list-ul:hover, .liste-fonctionnement:hover .fa-store:hover {
+  color: #9356DC;
 }
 
 .numero {
@@ -265,43 +341,54 @@ body {
   color: white;
 }
 
-.fa-mobile-alt:hover, .fa-list-ul:hover, .fa-store:hover {
-  color: #9356DC;
-}
-
 ::marker {
   color: black;
 }
 
 section {
   height: 1350px;
-  width: 370px;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: #f6f6f6;
 }
 
 section h2 {
   margin-top: 50px;
   margin-bottom: 35px;
-  margin-left: 10px;
+  margin-left: 15px;
   display: inline-block;
 }
 
 .box {
   background-color: #FFFFFF;
-  width: 350px;
+  width: 98%;
+  display: inline-block;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-radius: 25px 25px 25px 25px;
   margin-bottom: 25px;
-  margin-left: 10px;
+  height: 280px;
+  margin-left: 5px;
   -webkit-box-shadow: 3px 3px 3px #ebebeb;
           box-shadow: 3px 3px 3px #ebebeb;
 }
 
 .restaurant {
   height: 180px;
-  width: 350px;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   border-radius: 25px 25px 0px 0px;
   min-width: 0;
   min-height: 0;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
@@ -311,25 +398,32 @@ section h2 {
   height: 30px;
   width: 72px;
   background-color: #99E2D0;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  float: right;
   color: green;
-  text-align: center;
-  margin-left: 265px;
-  margin-top: -170px;
+  margin-top: -160px;
+  margin-right: 30px;
 }
 
 .texte-nouveau {
   margin-top: 5px;
+  margin-left: 5px;
 }
 
 .titre-box {
-  margin-right: 150px;
-  margin-left: 10px;
+  margin-right: 30px;
+  margin-left: 5px;
   margin-bottom: -30px;
 }
 
 .ville {
-  margin-left: 10px;
+  margin-right: 200px;
+  margin-left: 5px;
+  width: 110px;
   font-family: 'Roboto',sans-serif;
   font-weight: 100;
 }
@@ -339,7 +433,8 @@ section h2 {
   display: -ms-flexbox;
   display: flex;
   float: right;
-  margin-top: -68px;
+  margin-top: -95px;
+  margin-left: 320px;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -351,7 +446,7 @@ section h2 {
 
 .coeur::before {
   font-weight: bold;
-  color: white;
+  color: transparent;
   z-index: 5;
   font-size: 27px;
   -webkit-transform-origin: bottom;
@@ -362,7 +457,9 @@ section h2 {
 }
 
 .coeur:hover::before {
-  color: violet;
+  border: hidden;
+  color: #d269db;
+  outline: 0;
   -webkit-animation: 2s linear slideintop;
           animation: 2s linear slideintop;
 }
@@ -385,7 +482,7 @@ section h2 {
 }
 
 .kokoro:hover::before {
-  color: violet;
+  color: #d269db;
   z-index: 2;
 }
 
@@ -419,7 +516,14 @@ footer a {
 
 /* CSS des 4 Menus */
 html {
-  height: 1200px;
+  max-height: 1177px;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: -20px;
 }
 
 #fleche {
@@ -440,31 +544,70 @@ html {
 
 #menu-restaurant {
   height: 300px;
-  width: 370px;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 #section-page {
-  width: 370px;
+  width: auto;
+  height: auto;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
-  max-height: 1350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
-  height: 1260px;
-  width: 370px;
+  height: auto;
+  display: flex;
+  width: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #nom-restaurant {
   font-family: 'Shrikhand', sans-serif;
   font-size: 25px;
-  margin-left: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 25px;
 }
 
 .menu-coeur {
   height: 40px;
   width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   float: right;
   z-index: 1;
+}
+
+.far.fa-heart.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 55px;
+  margin-right: 20px;
 }
 
 .fa-heart.menu {
@@ -477,7 +620,6 @@ html {
   cursor: pointer;
   color: black;
   margin-top: 78px;
-  margin-right: 20px;
   border: none;
   background-color: transparent;
   outline: 0;
@@ -485,7 +627,7 @@ html {
 
 .fa-heart.menu::before {
   font-weight: bold;
-  color: white;
+  color: transparent;
   z-index: 5;
   font-size: 26px;
   -webkit-transform-origin: bottom;
@@ -495,7 +637,9 @@ html {
 }
 
 .fa-heart.menu:hover::before {
-  color: violet;
+  border: hidden;
+  color: #d269db;
+  outline: 0;
   -webkit-animation: 2s linear slideintop;
           animation: 2s linear slideintop;
 }
@@ -517,7 +661,7 @@ html {
 }
 
 .kokoro-menu:hover::before {
-  color: violet;
+  color: #d269db;
   z-index: 2;
 }
 
@@ -531,17 +675,72 @@ html {
 }
 
 .bloc-menu {
-  display: inline-block;
-  width: 340px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 95%;
   height: 80px;
   font-size: 18px;
   border-radius: 25px 25px 25px 25px;
   background-color: #FFF;
   font-family: sans-serif;
   position: relative;
+  -webkit-transform-origin: left;
+          transform-origin: left;
   cursor: pointer;
   margin-bottom: 10px;
   z-index: 0;
+}
+
+.bloc-menu:hover span {
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  width: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bloc-menu:hover .ligne-1 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bloc-menu:hover .ligne-2 {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.prix {
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  -webkit-transition: -webkit-transform 330ms ease-in-out;
+  transition: -webkit-transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out;
+  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: right;
+  margin-left: 240px;
+  margin-top: -20px;
 }
 
 .bloc-menu:after {
@@ -562,25 +761,35 @@ html {
 }
 
 .bloc-menu:hover:after {
-  width: 15%;
+  width: 18%;
   opacity: 1;
   z-index: 0;
 }
 
 .boite {
-  display: block;
-  margin-left: 305px;
-  margin-top: -82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: right;
+  margin-top: -42px;
+  margin-left: 85%;
   width: 30px;
   height: 30px;
-  font-size: 18px;
+  font-size: 24px;
   background-color: white;
   display: none;
 }
 
 .bloc-menu:hover .boite {
-  position: absolute;
-  display: block;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  float: right;
   opacity: 1;
   z-index: 10;
   background-color: #99E2D0;
@@ -629,6 +838,7 @@ html {
   margin-left: 15px;
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
+  margin-top: 85px;
 }
 
 .plats {
@@ -650,30 +860,32 @@ html {
 .ligne-1 {
   font-size: 16px;
   margin-left: 5px;
-  max-width: 240px;
+  width: 50%;
+  opacity: 1;
 }
 
 .ligne-2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  max-width: 240px;
+  width: 50%;
   font-size: 14px;
-  margin-left: 5px;
-  margin-top: -10px;
+  margin-top: 40px;
   opacity: 1;
-}
-
-.prix {
-  margin-top: -32px;
-  height: 60px;
-  width: 20px;
-  font-size: 16px;
-  margin-left: 260px;
-  font-family: 'Roboto', sans-serif;
+  margin-left: 5px;
+  position: absolute;
 }
 
 .btn-menu, .btn-menu-enchantee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 30px;
+  margin-left: 10px;
 }
 
 .titre-footer {
@@ -684,15 +896,31 @@ html {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 48%;
 }
 
-#menu.exception, #section-page-enchantee {
-  width: 370px;
+#section-page-enchantee {
+  width: auto;
+  height: auto;
   border-radius: 45px 45px 0px 0px;
   margin-top: -60px;
-  max-height: 1350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: -webkit-sticky;
   position: sticky;
+  height: auto;
+  display: flex;
+  width: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .loader {
@@ -777,8 +1005,8 @@ html {
   background-color: whitesmoke;
   z-index: -9999;
   opacity: 0;
-  height: 2345px;
-  width: 370px;
+  width: 100%;
+  height: 2283px;
   position: absolute;
   -webkit-animation-name: fond, apress;
           animation-name: fond, apress;
@@ -834,495 +1062,347 @@ html {
   }
 }
 
-/* Paramétrage Tablette */
-@media only screen and (min-width: 600px) and (max-width: 720px) {
-  .logo, #logo-menu {
-    margin-left: 110px;
-    width: 550px;
-    text-align: center;
+@media screen and (min-width: 259px) and (max-width: 370px) {
+  body {
+    min-width: 259px;
+    height: auto;
   }
-  .localisation {
-    width: 754px;
-  }
-  .presentation {
-    width: 824px;
-    text-align: center;
-    height: 250px;
+  html {
+    min-width: 259px;
+    height: auto;
   }
   #decouvrez {
-    margin-left: 130px;
-    margin-top: 40px;
+    margin-bottom: 20px;
   }
-  #reservez {
-    margin-left: 210px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  .fonctionnement p {
+    font-size: 14px;
+    margin-top: -20px;
+    width: 140px;
   }
-  .btn, .btn-menu, .btn-menu-enchantee {
-    margin-left: -30px;
-  }
-  .titre-fonctionnement {
-    margin-left: 80px;
-    margin-bottom: 30px;
-  }
-  .fonctionnement {
-    width: 450px;
-    margin-left: 220px;
-  }
-  section {
-    width: 620px;
-    height: 1450px;
-    margin-left: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .box {
-    margin-bottom: 70px;
-    margin-left: 40px;
-    width: 540px;
-    height: 280px;
-  }
-  .restaurant {
-    width: 540px;
-  }
-  #resto {
-    text-align: center;
-    margin-right: -30px;
-  }
-  .ville {
-    margin-top: 35px;
-    margin-left: -100px;
-  }
-  .nouveau {
-    margin-left: 450px;
-  }
-  i.kokoro {
-    margin-top: -57px;
-    margin-left: 523px;
-  }
-  .coeur::before {
-    margin-top: -77px;
-    margin-left: 492px;
-  }
-  footer {
-    width: 724px;
-    height: 130px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .titre-footer {
-    margin-right: 10px;
-  }
-  .lien-footer {
-    max-width: 1000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-  }
-  footer.li {
-    width: 1000px;
-    margin-right: 180px;
-  }
-  .texte-footer {
-    margin-right: 70px;
-    margin-top: 6px;
-  }
-  .background {
-    width: 1024px;
-    height: 2335px;
-  }
-  /* CSS Pages tablettes */
-  #fleche {
-    margin-top: 30px;
-  }
-  #menu-restaurant {
-    width: 720px;
-    min-width: 0;
-    min-height: 0;
+  .bloc-menu:hover span {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    width: 30px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
-  #section-page {
-    width: 600px;
-    height: 1200px;
+  .bloc-menu:hover .ligne-1 {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  #section-page-enchantee {
-    width: 600px;
-    height: 1300px;
+  .bloc-menu:hover .ligne-2 {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  .fa-heart.menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    float: right;
-    margin-left: 500px;
+  .bloc-menu:hover:after {
+    width: 22%;
+  }
+  .prix {
+    margin-left: 60px;
+    margin-top: 40px;
+  }
+  .boite {
     margin-top: -45px;
   }
-  .kokoro-menu {
-    margin-left: -13px;
-  }
   #nom-restaurant {
-    margin-left: 60px;
-    margin-top: 35px;
-    font-size: 30px;
+    font-size: 20px;
   }
-  .entrees {
-    margin-left: 60px;
-    margin-top: 5px;
+  .far.fa-heart.menu {
+    margin-right: 10px;
   }
-  .plats, .desserts {
-    margin-left: 60px;
-    margin-top: -10px;
+  #placement, #placement-1 {
+    margin-left: 240px;
   }
-  .btn-menu, .btn-menu-enchantee {
-    margin-left: 220px;
-    margin-bottom: 50px;
+  #different, #different-1 {
+    margin-left: 240px;
+  }
+  .ville {
+    width: 40%;
+  }
+  footer {
+    min-width: 259px;
   }
 }
 
-@media only screen and (min-width: 720px) and (max-width: 1024px) {
-  .logo, #logo-menu {
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  .prix {
+    margin-top: 40px;
     margin-left: 120px;
-    width: 800px;
+  }
+  .boite {
+    margin-top: -60px;
+    margin-left: 87%;
+  }
+  .bloc-menu:hover span {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    margin-top: -25px;
+    margin-left: 230px;
+  }
+  .bloc-menu:hover .boite {
+    margin-top: -40px;
+  }
+  .fonctionnement p {
+    margin-top: -1px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .bloc-menu:hover span {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    margin-top: 35px;
+    margin-left: 200px;
+  }
+  .boite {
+    margin-left: 89%;
+  }
+  .prix {
+    margin-top: 30px;
+  }
+  .fonctionnement p {
+    margin-top: -1px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  body {
+    height: auto;
+    max-width: 1100px;
+  }
+  #titre-fonctionnement, #resto {
+    width: 98%;
     text-align: center;
-  }
-  .localisation {
-    width: 1024px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .presentation {
-    width: 1024px;
-    text-align: center;
-    height: 250px;
-  }
-  #decouvrez {
-    margin-left: 280px;
-    margin-top: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  #reservez {
-    margin-left: 340px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .btn, .btn-menu, .btn-menu-enchantee {
-    margin-left: 30px;
-  }
-  .titre-fonctionnement {
-    margin-left: 80px;
-    margin-bottom: 30px;
-  }
-  .fonctionnement {
-    width: 450px;
-    margin-left: 345px;
   }
   section {
-    width: 800px;
-    height: 1450px;
-    margin-left: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 810px;
+    width: 100%;
   }
   .box {
-    margin-bottom: 70px;
-    margin-left: 80px;
-    width: 650px;
-    height: 290px;
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    margin-left: 50px;
   }
-  .restaurant {
-    width: 650px;
-  }
-  #resto {
-    text-align: center;
-  }
-  .ville {
-    margin-top: 35px;
-    margin-left: -100px;
-  }
-  .nouveau {
-    margin-left: 530px;
-  }
-  i.kokoro {
-    margin-left: 684px;
-    margin-top: -63px;
-  }
-  .coeur::before {
-    margin-top: -82px;
-    margin-left: 653px;
-  }
-  footer {
-    width: 1024px;
-    height: 130px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-  }
-  .titre-footer {
-    margin-right: 40px;
-  }
-  .lien-footer {
-    max-width: 1000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-  }
-  footer.li {
-    width: 1000px;
+  .numero {
     margin-right: 180px;
   }
-  .texte-footer {
-    margin-right: 70px;
-    margin-top: 6px;
+  .fonctionnement p {
+    margin-top: -1px;
   }
-  .background {
-    width: 1024px;
-    height: 2335px;
-  }
-  /* CSS Pages tablettes */
-  html {
-    height: 1200px;
-    width: 1024px;
-  }
-  #fleche {
-    margin-top: 30px;
-  }
-  #menu-restaurant {
-    width: 1024px;
+  .restaurant {
+    height: 180px;
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    border-radius: 25px 25px 0px 0px;
     min-width: 0;
     min-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #section-page, #section-page-enchantee {
-    width: 800px;
-    height: 950px;
-    margin-left: 120px;
-  }
-  .fa-heart.menu {
+  .fas.fa-heart.coeur {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    float: right;
-    margin-left: 690px;
-    margin-top: -51px;
-  }
-  .kokoro-menu {
-    margin-left: -13px;
-  }
-  #nom-restaurant {
-    margin-left: 60px;
-    font-size: 30px;
-  }
-  .entrees, .plats, .desserts {
-    margin-left: 60px;
-    margin-top: -10px;
-  }
-  .btn-menu, .btn-menu-enchantee {
-    margin-left: 300px;
-    margin-bottom: 50px;
-  }
-}
-
-/* Paramétrage Desktop */
-@media only screen and (min-width: 1024px) and (max-width: 9999px) {
-  .logo {
-    margin-left: 100px;
-    width: 1200px;
-    text-align: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #logo-menu {
-    width: 1440px;
-    text-align: center;
+  #placement, #placement-1 {
+    position: absolute;
+    margin-left: 695px;
   }
-  .localisation {
-    width: 1440px;
-  }
-  .localisation h2 {
-    margin-left: -60px;
-  }
-  input.btn, input.btn-menu, input.btn-menu-enchantee {
-    margin-left: -30px;
-  }
-  .presentation {
-    width: 1440px;
-    text-align: center;
-    height: 250px;
-  }
-  #decouvrez {
-    margin-left: 450px;
-    margin-top: 40px;
-  }
-  #reservez {
-    margin-left: 510px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-  }
-  .btn, .btn-menu, .btn-menu-enchantee {
-    margin-left: 30px;
-  }
-  .titre-fonctionnement {
-    margin-left: 80px;
-    margin-bottom: 30px;
-  }
-  .fonctionnement {
-    width: 450px;
-    margin-left: 550px;
-  }
-  section {
-    width: 1100px;
-    height: 1430px;
-    margin-left: 170px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .box {
-    margin-bottom: 70px;
-    margin-left: 125px;
-    width: 850px;
-    height: 290px;
-  }
-  .restaurant {
-    width: 850px;
-  }
-  #resto {
-    text-align: center;
+  #different, #different-1 {
+    position: absolute;
   }
   .ville {
-    margin-top: 35px;
-    margin-left: -100px;
+    width: 40%;
   }
-  .nouveau {
-    margin-left: 740px;
-  }
-  .fa-heart.coeur {
-    margin-left: 880px;
-  }
-  .fa-heart.coeur::before {
-    margin-top: -83px;
-  }
-  .fa-heart.kokoro {
-    margin-top: -64px;
-    margin-right: 1.5px;
-  }
-  footer {
-    width: 1440px;
-    height: 130px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-  }
-  .titre-footer {
-    margin-right: 40px;
-  }
-  .lien-footer {
-    max-width: 1000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
-  }
-  .texte-footer {
-    margin-right: 120px;
-    margin-top: 6px;
-  }
-  .background {
-    width: 1440px;
-    height: 2314px;
-  }
-  /* CSS Pages tablettes */
   html {
-    height: 1200px;
-    width: 1440px;
+    max-height: 1177px;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: -20px;
   }
-  #fleche {
+  #nom-restaurant, .entrees, .plats, .desserts {
+    margin-left: 50px;
+  }
+  .far.fa-heart.menu {
+    margin-right: 50px;
+  }
+  .prix {
+    margin-left: 280px;
     margin-top: 30px;
   }
-  #menu-restaurant {
-    width: 1440px;
+  .boite {
+    margin-left: 90%;
+    margin-top: -45px;
+  }
+  .background {
+    height: 1713px;
+    max-width: 1100px;
+  }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 9990px) {
+  body {
+    width: auto;
+    height: auto;
+  }
+  .logo, .presentation, .localisation {
+    width: 99.8%;
+    text-align: center;
+  }
+  #titre-fonctionnement {
+    width: 98%;
+    text-align: center;
+  }
+  .numero {
+    margin-right: 450px;
+  }
+  .fonctionnement p {
+    margin-top: -1px;
+  }
+  #resto {
+    width: 98%;
+    text-align: center;
+  }
+  .fas.fa-heart.coeur {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  section {
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    height: 800px;
+    width: 100%;
+  }
+  .box {
+    display: inline-block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40%;
+    margin-left: 80px;
+  }
+  .restaurant {
+    height: 180px;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
     min-width: 0;
     min-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     -o-object-fit: cover;
        object-fit: cover;
   }
-  #section-page {
-    width: 1000px;
-    height: 950px;
-    margin-left: 220px;
+  #placement, #placement-1 {
+    position: absolute;
+    margin-left: 960px;
   }
-  #section-page-enchantee {
-    width: 1000px;
-    height: 950px;
-    margin-left: 260px;
+  #different, #different-1 {
+    position: absolute;
+    margin-left: 400px;
   }
-  .fa-heart.menu {
+  .ville {
+    width: 40%;
+  }
+  html {
+    max-height: 1177px;
+    max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    float: right;
-    margin-left: 800px;
-    margin-top: -52px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: -20px;
   }
-  .kokoro-menu {
-    margin-left: -13px;
+  #nom-restaurant, .entrees, .plats, .desserts {
+    margin-left: 50px;
   }
-  #nom-restaurant {
-    margin-left: 145px;
-    font-size: 30px;
+  #menu-restaurant {
+    width: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .entrees, .plats, .desserts {
-    margin-left: 145px;
-    margin-top: -10px;
+  .far.fa-heart.menu {
+    margin-right: 50px;
   }
-  input.btn-menu, input.btn-menu-enchantee {
-    margin-left: 400px;
-    margin-bottom: 50px;
+  #section-page, #section-page-enchantee {
+    width: 75%;
+    margin-left: 150px;
+  }
+  .prix {
+    margin-left: 300px;
+    margin-top: 30px;
+  }
+  .boite {
+    margin-left: 90%;
+    margin-top: -35px;
+  }
+  .background {
+    height: 1733px;
+    max-width: 2500px;
   }
 }
 /*# sourceMappingURL=style.css.map */
