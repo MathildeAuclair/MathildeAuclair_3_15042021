@@ -668,7 +668,7 @@ html {
     }
 .bloc-menu {
     &:hover span {
-            transform: translateX(-10px);
+            transform: translateX(-12px);
             margin-top: -25px;
             margin-left: 230px;
     }
@@ -686,7 +686,7 @@ html {
 {
 .bloc-menu {
     &:hover span {
-            transform: translateX(-10px);
+            transform: translateX(-20px);
             margin-top: 35px;
             margin-left: 200px;
     }
@@ -774,6 +774,11 @@ html {
     .far.fa-heart.menu {
         margin-right: 50px;
     }
+    .bloc-menu {
+        &:hover span {
+                transform: translateX(-20px);
+        }
+    }
     .prix {
         margin-left: 280px;
         margin-top: 30px;
@@ -787,11 +792,11 @@ html {
         max-width: 1100px;
     }
 }
-@media screen and ( min-width: 1050px ) and ( max-width: 9990px ) { 
+@media screen and ( min-width: 1050px ) and ( max-width: 9999px ) { 
 
     body {
-        width: auto;
-        height: auto;
+        max-width: 2000px;
+        max-height: 2000px;
     }
     .logo, .presentation, .localisation {
         width: 99.8%;
@@ -805,8 +810,15 @@ html {
         margin-right: 450px;
     }
     .fonctionnement {
+        i {
+            margin-left: -160px;
+        }
         p {
-            margin-top: -1px;
+            margin-top: -22px;
+            width: 90%;
+            display: flex;
+            flex-wrap: wrap;
+           justify-content: center;
         }
     }
     #resto {
@@ -818,19 +830,21 @@ html {
         flex-wrap: wrap;
     }
     section {
-        display: inline-block;
+        display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
         height: 800px;
         width: 100%;
     }
     .box
     {
-    display: inline-block;
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    justify-content: center;
     width: 40%;
-    margin-left: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
 }
 .restaurant {
     height: 180px;
@@ -838,21 +852,34 @@ html {
     border-radius: 25px 25px 0px 0px;
     min-width: 0;
 	min-height: 0;
-    display: flex;
+    display: inline-block;
     align-items: center;
 	overflow: hidden;
 	object-fit: cover;
 }
-#placement, #placement-1 {
+#placement {
     position: absolute;
-    margin-left: 960px;
+    right: 150px;
+    top: 560px;
+    margin-top: 555px;
 }
-#different, #different-1 {
+#placement-1 {
     position: absolute;
-    margin-left: 400px;
+    right: 145px;
+    top: 1540px;
+}
+#different {
+    position: absolute;
+    left: 130px;
+    top: 1540px;
+}
+#different-1 {
+    position: absolute;
+    left: 125px;
+    top: 1210px;
 }
 .ville {
-    width: 40%;
+    width: 50%;
 }
 html {
         max-height: 1177px;
@@ -879,7 +906,17 @@ html {
     }
     #section-page, #section-page-enchantee {
         width: 75%;
-        margin-left: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 12%;
+        margin-right: 10%;
+    }
+    .bloc-menu {
+        &:hover span {
+                transform: translateX(-30px);
+                margin-left: 350px;
+        }
     }
     .prix {
         margin-left: 300px;
