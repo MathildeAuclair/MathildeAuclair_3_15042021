@@ -556,7 +556,7 @@ html {
    } 
    .background {
     background-size: cover;
-    background-color: whitesmoke;
+    background-color: white;
     z-index: -9999;
     opacity: 0;
     width: 100%;
@@ -795,8 +795,8 @@ html {
 @media screen and ( min-width: 1050px ) and ( max-width: 9999px ) { 
 
     body {
-        max-width: 2000px;
-        max-height: 2000px;
+        width: 6000px;
+        height: 1705px;
     }
     .logo, .presentation, .localisation {
         width: 99.8%;
@@ -832,64 +832,68 @@ html {
     section {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         justify-content: center;
-        height: 800px;
+        height: 1400px;
         width: 100%;
     }
     .box
     {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 40%;
-    margin-right: 50px;
+    max-width: 80%;
     margin-left: 50px;
+    a {
+        width: 100%;
+    }
 }
 .restaurant {
     height: 180px;
     width: 100%;
     border-radius: 25px 25px 0px 0px;
+    position: relative;
     min-width: 0;
 	min-height: 0;
-    display: inline-block;
-    align-items: center;
 	overflow: hidden;
 	object-fit: cover;
 }
 #placement {
     position: absolute;
-    right: 150px;
-    top: 560px;
-    margin-top: 555px;
+    right: 700px;
+    top: 550px;
+    margin-top: 545px;
 }
 #placement-1 {
     position: absolute;
-    right: 145px;
-    top: 1540px;
+    right: 700px;
+    top: 1820px;
 }
 #different {
     position: absolute;
-    left: 130px;
-    top: 1540px;
+    right: 700px;
+    top: 2140px;
 }
 #different-1 {
     position: absolute;
-    left: 125px;
-    top: 1210px;
+    right: 700px;
+    top: 1510px;
 }
 .ville {
-    width: 50%;
+    width: 80%;
 }
 html {
         max-height: 1177px;
         max-width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         margin-bottom: -20px;
     }
-    #nom-restaurant, .entrees, .plats, .desserts {
+    #nom-restaurant {
         margin-left: 50px;
+    }
+    .entrees, .plats, .desserts {
+        margin-left: 50px;
+        width: 80%;
     }
     #menu-restaurant {
         width: 100%;
@@ -927,7 +931,7 @@ html {
         margin-top: -35px;
     }
     .background {
-        height: 1733px;
-        max-width: 2500px;
+        height: 2333px;
+        width: 100%;
     }
 }
